@@ -10,7 +10,7 @@ const SignIn = ({ setUser }) => {
     password: "",
   });
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const onFormInputChanged = (e) => {
     setFormData({
       ...formData,
@@ -20,21 +20,23 @@ const SignIn = ({ setUser }) => {
 
   const onFormSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
+    // alert("login success");
+    // console.log(formData);
 
     // post user credentialas to login route
 
     fetch("/login", {
       method: "POST",
       headers: {
-        "Content-Type": "applicaton/json",
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(formData),
     }).then((res) => {
       if (res.ok) {
         res.json().then((user) => {
           setUser(user);
-          alert("Successful log in");
+          console.log(user);
+          alert(errors);
         });
       } else {
         res.json().then((error) => setErrors(error.errors));
