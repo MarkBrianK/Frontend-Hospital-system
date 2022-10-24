@@ -12,6 +12,8 @@ const Nav = () => {
       }
     });
   };
+
+  
   return (
   <div>
     <nav id="nav" className="navbar navbar-light">
