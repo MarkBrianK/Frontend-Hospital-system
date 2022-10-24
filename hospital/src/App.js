@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import Patient from "./pages/Patient";
 import Pharmacy from "./pages/Pharmacy";
 import Registrar from "./pages/Registrar";
+
 function App() {
   const [user, setUser] = useState(null);
   const [login, setLogin] = useState(null);
