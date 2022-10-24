@@ -52,7 +52,7 @@ const Nav = () => {
                             <i className="fs-4 bi-speedometer2"></i> <span className="ms-1 d-none d-sm-inline">Dashboard</span> </a>
                         <ul className="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
                             <li className="w-100">
-                                <a href="#" className="nav-link px-0"> <span className="d-none d-sm-inline">Doctor Details</span> 1 </a>
+                                <a href="#" className="nav-link px-0"> <span className="d-none d-sm-inline">Doctor Details</span></a>
                             </li>
                         </ul>
                     </li>
