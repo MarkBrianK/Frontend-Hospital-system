@@ -1,5 +1,7 @@
 import React from "react";
 import "../Nav/Nav.css"
+import home from "./images/house.svg"
+import chat from "./images/chat-left.svg"
 const Nav = () => {
   // logout functionality
   const onHandleLogoutClick = ({ setUser }) => {
@@ -13,15 +15,24 @@ const Nav = () => {
     });
   };
 
-  
+
   return (
-  <div>
+  <div >
     <nav id="nav" className="navbar navbar-light">
     <div className="container-fluid">
-    <span className="navbar-brand mb-0 h1">Navbar</span>
+    <div>
+        <a href="#">
+        <img src={home}  alt="home icon" />
+        </a>
+    </div>
+    <div>
+    <a href="mailto:ngilaian@gmail.com">
+        <img src={chat}  alt="home icon" />
+        </a>
+    </div>
     </div>
     </nav>
- 
+
 
     <div className="container-fluid">
     <div className="row flex-nowrap">
