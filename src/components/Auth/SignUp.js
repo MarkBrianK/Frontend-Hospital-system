@@ -20,6 +20,7 @@ const SignUp = ({ setLogin }) => {
       body: JSON.stringify(formData),
     })
       .then((res) => res.json())
+      
       .then(setLogin);
     alert("signup success");
     console.log(formData);
