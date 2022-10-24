@@ -1,7 +1,7 @@
 import React from "react";
 
 const Pharmacy = () => {
-  return <div>Pharmacy</div>;
+  return <div>Pharmay</div>;
 };
 
 export default Pharmacy;
