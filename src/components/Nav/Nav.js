@@ -1,29 +1,5 @@
-// import React from "react";
-
-// const Nav = () => {
-//   // logout functionality
-
-//   const onHandleLogoutClick = ({ setUser }) => {
-//     fetch("/logout", {
-//       method: "DELETE",
-//     }).then((res) => {
-//       if (res.ok) {
-//         setUser(null);
-//         alert("successfully looged out");
-//       }
-//     });
-//   };
-
-//   return (
-//     <div>
-//       Nav
-//       <button onClick={onHandleLogoutClick}>Logout</button>
-//     </div>
-//   );
-// };
-
-// export default Nav;
 import React from "react";
+import "../Nav/Nav.css"
 const Nav = () => {
   // logout functionality
   const onHandleLogoutClick = ({ setUser }) => {
@@ -36,8 +12,17 @@ const Nav = () => {
       }
     });
   };
+
   
   return (
+  <div>
+    <nav id="nav" className="navbar navbar-light">
+    <div className="container-fluid">
+    <span className="navbar-brand mb-0 h1">Navbar</span>
+    </div>
+    </nav>
+ 
+
     <div className="container-fluid">
     <div className="row flex-nowrap">
         <div className="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
@@ -52,7 +37,6 @@ const Nav = () => {
                         </a>
                     </li>
                     <li>
-                    
                         <a href="#submenu1" data-bs-toggle="collapse" className="nav-link px-0 align-middle">
                             <i className="fs-4 bi-speedometer2"></i> <span className="ms-1 d-none d-sm-inline">Dashboard</span> </a>
                         <ul className="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
@@ -119,6 +103,7 @@ const Nav = () => {
             Content area...
         </div>
     </div>
+</div>
 </div>
   );
 };
