@@ -7,12 +7,11 @@ import { NavLink} from 'react-router-dom';
 
 const Nav = () => {
 
-  const publicUrl = "https://calendar.google.com/calendar/embed?src=kariukimarkbrian%40gmail.com&ctz=UTC"
 
   return (
   <div >
     <div className="render">
-    <div style={{display:'flex', height:'100%', width:'60%', overflow:'scroll initial'}}>
+    <div style={{display:'flex', height:'100vh', width:'60%', position:'absolute', overflow:'scroll initial'}}>
 <CDBSidebar textColor="black" backgroundColor="#E9E6E9">
     <CDBSidebarHeader prefix={<i className="fa fa-bars fa-large"></i>}>
         <p>Main Navigation</p>
@@ -20,7 +19,7 @@ const Nav = () => {
     <CDBSidebarContent className="sidebar-content">
         <CDBSidebarMenu>
             <NavLink exact to="/pharmacy" activeClassName="activeClicked">
-                <CDBSidebarMenuItem icon="th-large">
+                <CDBSidebarMenuItem icon="">
                     <p>Pharmacy</p>
                 </CDBSidebarMenuItem> <br></br>
             </NavLink>
