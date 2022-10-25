@@ -12,7 +12,7 @@ const SignUp = ({ setLogin }) => {
 
   const onFormSubmit = (e) => {
     e.preventDefault();
-    fetch("/signup", {
+    fetch("/users/signup", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

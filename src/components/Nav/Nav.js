@@ -4,7 +4,7 @@ const Nav = () => {
   // logout functionality
 
   const onHandleLogoutClick = ({ setUser }) => {
-    fetch("/logout", {
+    fetch("/users/signout", {
       method: "DELETE",
     }).then((res) => {
       if (res.ok) {

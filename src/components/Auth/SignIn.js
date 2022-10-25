@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 const SignIn = ({ setUser }) => {
   // const [password, setPassword] = useState('')
   // const [email, setEmail] = useState('')
+  const navigate = useNavigate();
   const [errors, setErrors] = useState([]);
   const [formData, setFormData] = useState({
     email: "",
@@ -25,7 +26,7 @@ const SignIn = ({ setUser }) => {
 
     // post user credentialas to login route
 
-    fetch("/login", {
+    fetch("/users/signin", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -35,7 +36,9 @@ const SignIn = ({ setUser }) => {
       if (res.ok) {
         res.json().then((user) => {
           setUser(user);
-          console.log(user);
+
+          // console.log(user);
+          navigate("/home");
           alert(errors);
         });
       } else {
