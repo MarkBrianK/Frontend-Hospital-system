@@ -9,12 +9,21 @@ import Patient from "./pages/Patient";
 import Pharmacy from "./pages/Pharmacy";
 import Registrar from "./pages/Registrar";
 import Laboratory from "./pages/Laboratory";
+import Header from "./components/Nav/Header";
+import "../src/pages/App.css"
 function App() {
   const [user, setUser] = useState(null);
   const [login, setLogin] = useState(null);
   return (
-    <div className="App">
-      <Nav setUser={setUser} />
+    <div>
+      <Header />
+
+      <div className="App">
+      <div>
+      <Nav />
+      </div>
+
+      <div>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/pharmacy" element={<Pharmacy />} />
@@ -31,6 +40,11 @@ function App() {
           element={<SignUp onLogin={() => setLogin(login)} />}
         />
       </Routes>
+      </div>
+
+      </div>
+
+
     </div>
   );
 }
