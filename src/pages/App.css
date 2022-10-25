@@ -1,8 +1,5 @@
 .render{
     height: 100%;
 }
-.App{
-    display: grid;
-    grid-template-columns: auto auto;
-}
+
 
