@@ -10,6 +10,7 @@ import Pharmacy from "./pages/Pharmacy";
 import Registrar from "./pages/Registrar";
 import Laboratory from "./pages/Laboratory";
 import Header from "./components/Nav/Header";
+import "./pages/App.css"
 import "../src/pages/App.css"
 function App() {
   const [user, setUser] = useState(null);
@@ -22,7 +23,7 @@ function App() {
     <Nav />
 
     </div>
-    <div class="col-8">
+    <div class="col-8" className="component">
     <Routes>
   <Route path="/" element={<Home />} />
   <Route path="/pharmacy" element={<Pharmacy />} />
