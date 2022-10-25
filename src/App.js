@@ -22,7 +22,7 @@ function App() {
     <Nav />
 
     </div>
-    <div class="col-6">
+    <div class="col-8">
     <Routes>
   <Route path="/" element={<Home />} />
   <Route path="/pharmacy" element={<Pharmacy />} />
