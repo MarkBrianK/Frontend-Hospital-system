@@ -16,36 +16,37 @@ function App() {
   const [login, setLogin] = useState(null);
   return (
     <div>
-      <Header />
+       <Header />
+       <div class="row">
+    <div class="col-4">
+    <Nav />
 
-      <div className="App">
-      <div>
-      <Nav />
-      </div>
+    </div>
+    <div class="col-8">
+    <Routes>
+  <Route path="/" element={<Home />} />
+  <Route path="/pharmacy" element={<Pharmacy />} />
+  <Route path="/doctor" element={<Doctor />} />
+  <Route path="/registrar" element={<Registrar />} />
+  <Route path="/patient" element={<Patient />} />
+  <Route path="/laboratory" element={<Laboratory />} />
+  <Route
+    path="/signin"
+    element={<SignIn user={user} setUser={setUser} />}
+  />
+  <Route
+    path="/signup"
+    element={<SignUp onLogin={() => setLogin(login)} />}
+  />
+</Routes>
+    </div>
+  </div>
 
-      <div>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/pharmacy" element={<Pharmacy />} />
-        <Route path="/doctor" element={<Doctor />} />
-        <Route path="/registrar" element={<Registrar />} />
-        <Route path="/patient" element={<Patient />} />
-        <Route path="/laboratory" element={<Laboratory />} />
-        <Route
-          path="/signin"
-          element={<SignIn user={user} setUser={setUser} />}
-        />
-        <Route
-          path="/signup"
-          element={<SignUp onLogin={() => setLogin(login)} />}
-        />
-      </Routes>
-      </div>
-
-      </div>
 
 
     </div>
+
+
   );
 }
 
