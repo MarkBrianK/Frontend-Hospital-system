@@ -12,7 +12,7 @@ const Nav = () => {
   return (
   <div >
     <div className="render">
-    <div style={{display:'flex', height:'100%', width:'60%', position:'absolute', overflow:'scroll initial'}}>
+    <div style={{display:'flex', height:'100%', width:'60%', overflow:'scroll initial'}}>
 <CDBSidebar textColor="black" backgroundColor="#E9E6E9">
     <CDBSidebarHeader prefix={<i className="fa fa-bars fa-large"></i>}>
         <p>Main Navigation</p>
