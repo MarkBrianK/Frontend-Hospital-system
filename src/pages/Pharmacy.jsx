@@ -19,9 +19,7 @@ const Pharmacy = () => {
     <div class="valid-tooltip">
       Looks good!
     </div>
-  
-  
-  <div class="col-3">
+  <div class="col-12">
     <button class="btn btn-primary" type="submit">Add item</button>
   </div>
   </div>
