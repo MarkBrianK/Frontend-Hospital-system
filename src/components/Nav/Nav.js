@@ -54,6 +54,11 @@ const Nav = () => {
                      <p>Patient</p>
                 </CDBSidebarMenuItem><br></br>
             </NavLink>
+            <NavLink exact to="/laboratory" activeClassName="activeClicked">
+                 <CDBSidebarMenuItem icon="columns">
+                     <p>Laboratory</p>
+                </CDBSidebarMenuItem><br></br>
+            </NavLink>
         </CDBSidebarMenu>
     </CDBSidebarContent>
 
