@@ -4,6 +4,7 @@ const Pharmacy = () => {
   return <div>Stock Issues Details
 
 
+
     <form class="row g-3 needs-validation" novalidate>
   <div class="col-md-4 position-relative">
     <label for="validationTooltip01" class="form-label">Patient name</label>
