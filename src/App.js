@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import Patient from "./pages/Patient";
 import Pharmacy from "./pages/Pharmacy";
 import Registrar from "./pages/Registrar";
+import Laboratory from "./pages/Laboratory";
 function App() {
   const [user, setUser] = useState(null);
   const [login, setLogin] = useState(null);
@@ -20,6 +21,7 @@ function App() {
         <Route path="/doctor" element={<Doctor />} />
         <Route path="/registrar" element={<Registrar />} />
         <Route path="/patient" element={<Patient />} />
+        <Route path="/laboratory" element={<Laboratory />} />
         <Route
           path="/signin"
           element={<SignIn user={user} setUser={setUser} />}
