@@ -1,27 +1,21 @@
-import React from "react";
+import React,{useState} from "react";
 import "../Nav/Nav.css"
 import home from "./images/house.svg"
 import chat from "./images/chat-left.svg"
-const Nav = () => {
-  // logout functionality
-  const onHandleLogoutClick = ({ setUser }) => {
-    fetch("/logout", {
-      method: "DELETE",
-    }).then((res) => {
-      if (res.ok) {
-        setUser(null);
-        alert("successfully looged out");
-      }
-    });
-  };
+import 'react-calendar/dist/Calendar.css'
+import {  CDBSidebar, CDBSidebarContent, CDBSidebarHeader, CDBSidebarMenu,  CDBSidebarMenuItem} from 'cdbreact';
+import { NavLink} from 'react-router-dom';
 
+const Nav = () => {
+
+  const publicUrl = "https://calendar.google.com/calendar/embed?src=kariukimarkbrian%40gmail.com&ctz=UTC"
 
   return (
   <div >
     <nav id="nav" className="navbar navbar-light">
     <div className="container-fluid">
     <div>
-        <a href="#">
+        <a href="/">
         <img src={home}  alt="home icon" />
         </a>
     </div>
@@ -32,89 +26,40 @@ const Nav = () => {
     </div>
     </div>
     </nav>
+    <div className="render">
+    <div style={{display:'flex', height:'1000px', overflow:'scroll initial'}}>
+<CDBSidebar textColor="black" backgroundColor="#E9E6E9">
+    <CDBSidebarHeader prefix={<i className="fa fa-bars fa-large"></i>}>
+        <p>Main Navigation</p>
+    </CDBSidebarHeader>
+    <CDBSidebarContent className="sidebar-content">
+        <CDBSidebarMenu>
+            <NavLink exact to="/pharmacy" activeClassName="activeClicked">
+                <CDBSidebarMenuItem icon="columns">
+                    <p>Pharmacy</p>
+                </CDBSidebarMenuItem> <br></br>
+            </NavLink>
+            <NavLink exact to="/doctor" activeClassName="activeClicked">
+                <CDBSidebarMenuItem icon="columns">
+                <p>Doctor</p>
+                </CDBSidebarMenuItem><br></br>
+            </NavLink>
+            <NavLink exact to="/registrar" activeClassName="activeClicked">
+                <CDBSidebarMenuItem icon="columns">
+                    <p>Registrar</p>
+                </CDBSidebarMenuItem><br></br>
+            </NavLink>
+            <NavLink exact to="/patient" activeClassName="activeClicked">
+                 <CDBSidebarMenuItem icon="columns">
+                     <p>Patient</p>
+                </CDBSidebarMenuItem><br></br>
+            </NavLink>
+        </CDBSidebarMenu>
+    </CDBSidebarContent>
 
-
-    <div className="container-fluid">
-    <div className="row flex-nowrap">
-        <div className="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
-            <div className="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
-                <a href="/" className="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-                    <span className="fs-5 d-none d-sm-inline">Menu</span>
-                </a>
-                <ul className="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
-                    <li className="nav-item">
-                        <a href="#" className="nav-link align-middle px-0">
-                            <i className="fs-4 bi-house"></i> <span className="ms-1 d-none d-sm-inline">Home</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#submenu1" data-bs-toggle="collapse" className="nav-link px-0 align-middle">
-                            <i className="fs-4 bi-speedometer2"></i> <span className="ms-1 d-none d-sm-inline">Dashboard</span> </a>
-                        <ul className="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
-                            <li className="w-100">
-                                <a href="#" className="nav-link px-0"> <span className="d-none d-sm-inline">Doctor Details</span></a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#" className="nav-link px-0 align-middle">
-                            <i className="fs-4 bi-table"></i> <span className="ms-1 d-none d-sm-inline">Laboratory</span></a>
-                    </li>
-                    <li>
-                        <a href="#submenu2" data-bs-toggle="collapse" className="nav-link px-0 align-middle ">
-                            <i className="fs-4 bi-bootstrap"></i> <span className="ms-1 d-none d-sm-inline">Pharmacy</span></a>
-                        <ul className="collapse nav flex-column ms-1" id="submenu2" data-bs-parent="#menu">
-                            <li className="w-100">
-                                <a href="#" className="nav-link px-0"> <span className="d-none d-sm-inline">Patient</span> 1</a>
-                            </li>
-                            <li>
-                                <a href="#" className="nav-link px-0"> <span className="d-none d-sm-inline">Item</span> 2</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#submenu3" data-bs-toggle="collapse" className="nav-link px-0 align-middle">
-                            <i className="fs-4 bi-grid"></i> <span className="ms-1 d-none d-sm-inline">Patient</span> </a>
-                            <ul className="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
-                            <li className="w-100">
-                                <a href="#" className="nav-link px-0"> <span className="d-none d-sm-inline">Product</span> 1</a>
-                            </li>
-                            <li>
-                                <a href="#" className="nav-link px-0"> <span className="d-none d-sm-inline">Product</span> 2</a>
-                            </li>
-                            <li>
-                                <a href="#" className="nav-link px-0"> <span className="d-none d-sm-inline">Product</span> 4</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#" className="nav-link px-0 align-middle">
-                            <i className="fs-4 bi-people"></i> <span className="ms-1 d-none d-sm-inline">Customers</span> </a>
-                    </li>
-                </ul>
-                <hr/>
-                <div className="dropdown pb-4">
-                    <a href="#" className="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="https://github.com/mdo.png" alt="hugenerd" width="30" height="30" className="rounded-circle"/>
-                        <span className="d-none d-sm-inline mx-1">loser</span>
-                    </a>
-                    <ul className="dropdown-menu dropdown-menu-dark text-small shadow">
-                        <li><a className="dropdown-item" href="#">New project...</a></li>
-                        <li><a className="dropdown-item" href="#">Settings</a></li>
-                        <li><a className="dropdown-item" href="#">Profile</a></li>
-                        <li>
-                            <hr className="dropdown-divider"/>
-                        </li>
-                        <li><a className="dropdown-item" href="#">Sign out</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div className="col py-3">
-            Content area...
-        </div>
-    </div>
+</CDBSidebar>
 </div>
+    </div>
 </div>
   );
 };
