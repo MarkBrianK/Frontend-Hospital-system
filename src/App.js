@@ -19,7 +19,7 @@ function App() {
     <div>
        <Header />
        <div class="row">
-    <div class="col-2">
+    <div class="col-4">
     <Nav />
 
     </div>
