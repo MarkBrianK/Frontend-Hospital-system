@@ -23,7 +23,7 @@ function App() {
     <Nav />
 
     </div>
-    <div class="col-8" className="component">
+    <div class="col-8">
     <Routes>
   <Route path="/" element={<Home />} />
   <Route path="/pharmacy" element={<Pharmacy />} />
