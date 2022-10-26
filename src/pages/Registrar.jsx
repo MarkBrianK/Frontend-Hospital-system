@@ -28,7 +28,7 @@ const Registrar=(props)=>{
         <p className="col-md-12"><input type="text" placeholder="Parent/Guardian contact"/><span className="extern-type">For emergencies</span></p>
       </div>
       <div className="row"/>
-        <div className="col-md-6 city-wrap"/>
+        <div className="city-wrap"/>
 
           <div>
            <label> Gender
