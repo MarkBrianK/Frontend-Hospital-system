@@ -12,6 +12,7 @@ import Laboratory from "./pages/Laboratory";
 import Header from "./components/Nav/Header";
 import "./pages/App.css"
 import "../src/pages/App.css"
+
 function App() {
   const [user, setUser] = useState(null);
   const [login, setLogin] = useState(null);
