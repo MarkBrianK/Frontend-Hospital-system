@@ -7,11 +7,10 @@ import { NavLink} from 'react-router-dom';
 
 const Nav = () => {
 
-
   return (
   <div >
     <div className="render">
-    <div style={{display:'flex', height:'100vh', width:2, position:'absolute', overflow:'scroll initial'}}>
+    <div >
 <CDBSidebar textColor="black" backgroundColor="#E9E6E9">
     <CDBSidebarHeader prefix={<i className="fa fa-bars fa-large"></i>}>
         <p>Main Navigation</p>

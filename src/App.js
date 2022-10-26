@@ -20,11 +20,11 @@ function App() {
     <div>
        <Header />
        <div class="row">
-    <div class="col-2">
+    <div class="col-4">
     <Nav />
 
     </div>
-    <div class="col-8" className="component">
+    <div class="col-8">
     <Routes>
   <Route path="/" element={<Home />} />
   <Route path="/pharmacy" element={<Pharmacy />} />
