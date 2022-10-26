@@ -9,9 +9,9 @@ const Pharmacy = () => {
   <div class="col-md-4 position-relative">
     <label for="validationTooltip01" class="form-label">Patient name</label>
     <input type="text" class="form-control" id="validationTooltip01"  required/>
-    <div class="valid-tooltip">
-      Looks good!
-    </div>
+      <div class="valid-tooltip">
+        Looks good!
+      </div>
   </div>
   <div class="col-md-4 position-relative">
     <label for="validationTooltip02" class="form-label">Inventory Item</label>
@@ -19,7 +19,7 @@ const Pharmacy = () => {
     <div class="valid-tooltip">
       Looks good!
     </div>
-  <div class="col-12">
+  <div class="col-2">
     <button class="btn btn-primary" type="submit">Add item</button>
   </div>
   </div>
