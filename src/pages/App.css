@@ -12,6 +12,14 @@ figcaption,.com { color: #93a1a1; }
 .kwd, .linenums .tag { color: #1e347b; }
 .typ, .atn, .dec, .var { color: teal; }
 .pln { color: #48484c; }
+.calendar{
+  height: 100%;
+  width: 80%;
+}
+#registrar{
+  height: 100%;
+}
+
 
 .prettyprint {
   padding: 8px;
@@ -27,7 +35,7 @@ figcaption,.com { color: #93a1a1; }
 /* Specify class=linenums on a pre to get line numbering */
 ol.linenums {
   margin: 0 0 0 33px; /* IE indents via margin-left */
-} 
+}
 ol.linenums li {
   padding-left: 12px;
   color: #bebec5;

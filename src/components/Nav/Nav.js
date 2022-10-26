@@ -9,16 +9,16 @@ const Nav = () => {
 
   return (
   <div >
-    <div className="render">
     <div >
-<CDBSidebar textColor="black" backgroundColor="#E9E6E9">
-    <CDBSidebarHeader prefix={<i className="fa fa-bars fa-large"></i>}>
-        <p>Main Navigation</p>
-    </CDBSidebarHeader>
-    <CDBSidebarContent className="sidebar-content">
+     <div className="render">
+        <CDBSidebar textColor="black" backgroundColor="#E9E6E9" minWidth= "auto" maxWidth="210px">
+            <CDBSidebarHeader prefix={<i className="fa fa-bars fa-large"></i>}>
+                <p>Main Navigation</p>
+            </CDBSidebarHeader>
+        <CDBSidebarContent className="sidebar-content">
         <CDBSidebarMenu>
             <NavLink exact to="/pharmacy" activeClassName="activeClicked">
-                <CDBSidebarMenuItem icon="">
+                <CDBSidebarMenuItem icon="columns">
                     <p>Pharmacy</p>
                 </CDBSidebarMenuItem> <br></br>
             </NavLink>

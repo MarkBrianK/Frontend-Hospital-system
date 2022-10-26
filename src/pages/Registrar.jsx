@@ -3,11 +3,11 @@ import "../pages/App.css"
 
 const Registrar=(props)=>{
   return(
-//  
+//
 
 
 
-  <div className="form-wrapper"> 
+  <div id="registrar" className="form-wrapper"> 
     <form action="#non" method="post" className="fcorn-register container">
       <p className="register-info">Note: All fields are required.</p>
       <div className="row">
@@ -42,7 +42,10 @@ const Registrar=(props)=>{
         </div>
 
       
-        <div> 
+        
+        
+        <div>
+
           <p className="col-xs-12"><form action="upload.php" method="post" enctype="multipart/form-data"/>
           Upload your personal photo:
             <input type="file" name="fileToUpload" id="fileToUpload"/>
