@@ -12,6 +12,11 @@ figcaption,.com { color: #93a1a1; }
 .kwd, .linenums .tag { color: #1e347b; }
 .typ, .atn, .dec, .var { color: teal; }
 .pln { color: #48484c; }
+.calendar{
+  height: 100%;
+  width: 80%;
+}
+
 
 .prettyprint {
   padding: 8px;
