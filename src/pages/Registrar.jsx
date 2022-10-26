@@ -23,39 +23,29 @@ const Registrar=(props)=>{
       <p><input type="password" placeholder="Verify Password" required/></p> */}
       <div className="row">
         <p className="col-md-4"><input type="text" placeholder="Registration Date" required/></p>
-        <p className="col-md-4"><input type="text" placeholder="Address" required/></p>
+        <p className="col-md-4"><input type="date" id="birthday" name="birthday" placeholder="calendar" required/></p>
         <p className="col-md-4"><input type="text" placeholder="Contact" required/></p>
         <p className="col-md-12"><input type="text" placeholder="Parent/Guardian contact"/><span className="extern-type">For emergencies</span></p>
       </div>
       <div className="row"/>
-        <p className="col-md-6 city-wrap">
-          <select>
-            <option value="0" selected disabled>Gender</option>
-            <option value="1">Male </option>
-            <option value="1">Female </option>
-            <option value="1">Non binary </option>
-          </select>
-        </p>
-        {/* <p className="col-md-6 country-wrap">
-          <select>
-            <option value="0" selected disabled>Country</option>
-            <option value="1">U.S. Only</option>
-            <option value="2">Outside U.S.</option>
-          </select>
-        </p> */}
+        <div className="col-md-6 city-wrap"/>
 
-        {/* <div className="form-group">
-                <label htmlFor="appointmentDate">Appointment Date</label>
-                <Input
-                  type="datetime-local"
-                  className="form-control"
-                  name="appointmentDate"
-                  value={appointmentDate}
-                  onChange={onChangAppointmentDate}
-                  validations={[required]}
-                />
-              </div> */}
+          <div>
+           <label> Gender
+          <select>
+          <option value="0" selected disabled>Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Non binary">Non binary</option>
+          </select>
+          </label>
+        </div>
+
+      
+        
+        
         <div>
+
           <p className="col-xs-12"><form action="upload.php" method="post" enctype="multipart/form-data"/>
           Upload your personal photo:
             <input type="file" name="fileToUpload" id="fileToUpload"/>
