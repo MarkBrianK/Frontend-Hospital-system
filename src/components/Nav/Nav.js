@@ -11,7 +11,7 @@ const Nav = () => {
   <div >
     <div >
      <div className="render">
-        <CDBSidebar textColor="black" backgroundColor="#E9E6E9" minWidth= "180px" maxWidth="210px">
+        <CDBSidebar textColor="black" backgroundColor="#E9E6E9" minWidth= "auto" maxWidth="210px">
             <CDBSidebarHeader prefix={<i className="fa fa-bars fa-large"></i>}>
                 <p>Main Navigation</p>
             </CDBSidebarHeader>
