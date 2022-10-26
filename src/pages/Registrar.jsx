@@ -23,19 +23,22 @@ const Registrar=(props)=>{
       <p><input type="password" placeholder="Verify Password" required/></p> */}
       <div className="row">
         <p className="col-md-4"><input type="text" placeholder="Registration Date" required/></p>
-        <p className="col-md-4"><input type="text" placeholder="Address" required/></p>
+        <p className="col-md-4"><input type="date" id="birthday" name="birthday" placeholder="Address" required/></p>
         <p className="col-md-4"><input type="text" placeholder="Contact" required/></p>
         <p className="col-md-12"><input type="text" placeholder="Parent/Guardian contact"/><span className="extern-type">For emergencies</span></p>
       </div>
       <div className="row"/>
-        <p className="col-md-6 city-wrap">
-          <select>
+        <div className="col-md-6 city-wrap">
+        <label>
+        <select>
             <option value="0" selected disabled>Gender</option>
             <option value="1">Male </option>
             <option value="1">Female </option>
             <option value="1">Non binary </option>
           </select>
-        </p>
+          </label>
+        </div>
+
         {/* <p className="col-md-6 country-wrap">
           <select>
             <option value="0" selected disabled>Country</option>
