@@ -84,13 +84,13 @@ const Pharmacy = () => {
       Please provide a receipt no.
     </div>
   </div>
-  <div class="col-12">
+  <div >
     <button class="btn btn-primary" type="submit">Make payment</button>
   </div>
 </form>
   </div>;
 
-  
+
 };
 
 export default Pharmacy;
