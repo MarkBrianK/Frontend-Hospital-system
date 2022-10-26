@@ -20,7 +20,7 @@
 //       body: JSON.stringify(formData),
 //     })
 //       .then((res) => res.json())
-      
+
 //       .then(setLogin);
 //     alert("signup success");
 //     console.log(formData);
@@ -166,6 +166,7 @@ export default function SignUp() {
                   label="Last Name"
                   name="lastName"
                   autoComplete="family-name"
+                  
                 />
               </Grid>
               <Grid item xs={12}>
@@ -176,6 +177,7 @@ export default function SignUp() {
                   label="Email Address"
                   name="email"
                   autoComplete="email"
+
                 />
               </Grid>
               <Grid item xs={12}>
