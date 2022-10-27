@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../Nav/Nav.css";
+import { useNavigate } from "react-router-dom";
 import "react-calendar/dist/Calendar.css";
 import {
   CDBSidebar,
@@ -10,22 +11,23 @@ import {
 } from "cdbreact";
 import { NavLink } from "react-router-dom";
 
-const Nav = () => {
-  const onHandleLogoutClick = ({ setUser }) => {
-    fetch("/users/signout", {
+const Nav = ({ setUser, user }) => {
+  // console.log(user)
+  const navigate = useNavigate()
+  const onHandleLogoutClick = () => {
+    fetch("http://localhost:3000/users/signout", {
       method: "DELETE",
     }).then((res) => {
       if (res.ok) {
         setUser(null);
-        alert("successfully looged out");
+        alert("successfully logged out");
+        navigate("/");
       }
     });
   };
 
   return (
-    <div>
-      <div className="render">
-        <div>
+ 
           <CDBSidebar textColor="black" backgroundColor="#E9E6E9">
             <CDBSidebarHeader prefix={<i className="fa fa-bars fa-large"></i>}>
               <p>Main Navigation</p>
@@ -33,7 +35,7 @@ const Nav = () => {
             <CDBSidebarContent className="sidebar-content">
               <CDBSidebarMenu>
                 <NavLink exact to="/pharmacy" activeClassName="activeClicked">
-                  <CDBSidebarMenuItem icon="">
+                  <CDBSidebarMenuItem icon="columns">
                     <p>Pharmacy</p>
                   </CDBSidebarMenuItem>{" "}
                   <br></br>
@@ -66,9 +68,8 @@ const Nav = () => {
               </CDBSidebarMenu>
             </CDBSidebarContent>
           </CDBSidebar>
-        </div>
-      </div>
-    </div>
+     
+   
   );
 };
 export default Nav;

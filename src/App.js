@@ -13,7 +13,6 @@ import Header from "./components/Nav/Header";
 import "./pages/App.css"
 import "../src/pages/App.css"
 
-
 function App() {
   const [user, setUser] = useState(null);
   const [login, setLogin] = useState(null);
@@ -22,11 +21,10 @@ function App() {
     <div>
        <Header />
        <div class="row">
-    <div class="col-4">
-    <Nav />
-
+    <div class="col-2">
+      <Nav />
     </div>
-    <div class="col-8">
+    <div class="col-9">
     <Routes>
   <Route path="/" element={<Home />} />
   <Route path="/pharmacy" element={<Pharmacy />} />

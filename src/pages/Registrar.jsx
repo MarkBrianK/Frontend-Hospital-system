@@ -1,80 +1,109 @@
-import React from "react";
+import React from "react"
+import "../pages/App.css"
 
-const Registrar = () => {
+const Registrar=(props)=>{
   return (
-    <section class="vh-100" style="background-color: #eee;">
-  <div class="container h-100">
-    <div class="row d-flex justify-content-center align-items-center h-100">
-      <div class="col-lg-12 col-xl-11">
-        <div class="card text-black" style="border-radius: 25px;">
-          <div class="card-body p-md-5">
-            <div class="row justify-content-center">
-              <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+    //
 
-                <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
-
-                <form class="mx-1 mx-md-4">
-
-                  <div class="d-flex flex-row align-items-center mb-4">
-                    <i class="fas fa-user fa-lg me-3 fa-fw"></i>
-                    <div class="form-outline flex-fill mb-0">
-                      <input type="text" id="form3Example1c" class="form-control" />
-                      <label class="form-label" for="form3Example1c">Your Name</label>
-                    </div>
-                  </div>
-
-                  <div class="d-flex flex-row align-items-center mb-4">
-                    <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
-                    <div class="form-outline flex-fill mb-0">
-                      <input type="email" id="form3Example3c" class="form-control" />
-                      <label class="form-label" for="form3Example3c">Your Email</label>
-                    </div>
-                  </div>
-
-                  <div class="d-flex flex-row align-items-center mb-4">
-                    <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
-                    <div class="form-outline flex-fill mb-0">
-                      <input type="password" id="form3Example4c" class="form-control" />
-                      <label class="form-label" for="form3Example4c">Password</label>
-                    </div>
-                  </div>
-
-                  <div class="d-flex flex-row align-items-center mb-4">
-                    <i class="fas fa-key fa-lg me-3 fa-fw"></i>
-                    <div class="form-outline flex-fill mb-0">
-                      <input type="password" id="form3Example4cd" class="form-control" />
-                      <label class="form-label" for="form3Example4cd">Repeat your password</label>
-                    </div>
-                  </div>
-
-                  <div class="form-check d-flex justify-content-center mb-5">
-                    <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" />
-                    <label class="form-check-label" for="form2Example3">
-                      I agree all statements in <a href="#!">Terms of service</a>
-                    </label>
-                  </div>
-
-                  <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                    <button type="button" class="btn btn-primary btn-lg">Register</button>
-                  </div>
-
-                </form>
-
-              </div>
-              <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
-
-                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
-                  class="img-fluid" alt="Sample image"/>
-
-              </div>
-            </div>
-          </div>
+    <div className="form-wrapper">
+      <form action="#non" method="post" className="fcorn-register container">
+        <p className="register-info">Note: All fields are required.</p>
+        <div className="row">
+          <p className="col-md-6">
+            <input type="text" placeholder="Ticket Number" required />
+          </p>
+          <p className="col-md-6">
+            <input type="text" placeholder="Patient Name" required />
+          </p>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-  );
-};
+        <p>
+          <input type="email" placeholder="Email Address" required />
+          <span className="extern-type">We'll keep this private.</span>
+        </p>
+        {/* <p><input type="password" placeholder="Password" required/>
+        <span className="extern-type">Atleast 8 characters long.</span>
+      </p>
+      <p><input type="password" placeholder="Verify Password" required/></p> */}
+        <div className="row">
+          <p className="col-md-4">
+            <input type="text" placeholder="Registration Date" required />
+          </p>
+          <p className="col-md-4">
+            <input type="text" placeholder="Address" required />
+          </p>
+          <p className="col-md-4">
+            <input type="text" placeholder="Contact" required />
+          </p>
+          <p className="col-md-12">
+            <input type="text" placeholder="Parent/Guardian contact" />
+            <span className="extern-type">For emergencies</span>
+          </p>
+        </div>
+        <div className="row" />
+        <p className="col-md-6 city-wrap">
+          <select name="gender" id="gender">
+            <option value="0">Gender</option>
+            <option value="1">Male </option>
+            <option value="1">Female </option>
+            <option value="1">Non binary </option>
+          </select>
+        </p>
+        <p className="col-md-6 country-wrap">
+          <select>
+            <option value="0" selected disabled>Region</option>
+            <option value="1">Nairobi</option>
+            <option value="2">Outside Nairobi.</option>
+          </select>
+        </p>
 
-export default Registrar;
+        {/* <div className="form-group">
+                <label htmlFor="appointmentDate">Appointment Date</label>
+                <Input
+                  type="datetime-local"
+                  className="form-control"
+                  name="appointmentDate"
+                  value={appointmentDate}
+                  onChange={onChangAppointmentDate}
+                  validations={[required]}
+                />
+              </div> */}
+        <div>
+          <p className="col-xs-12">
+            <form
+              action="upload.php"
+              method="post"
+              enctype="multipart/form-data"
+            />
+            Upload your personal photo:
+            <input type="file" name="fileToUpload" id="fileToUpload" />
+            <input type="submit" value="Upload Image" name="submit" required />
+          </p>
+        </div>
+        <br />
+        <p className="register-toggle">
+          <label
+            for="register-agree"
+            className="toggle-label"
+            data-on="YES"
+            data-off="NO"
+          >
+            <input
+              type="checkbox"
+              id="register-agree"
+              className="toggle-input"
+            />
+            <span className="toggle-handle"></span>
+          </label>
+          <span class="info">
+            Do you agree to the <a href="/#">terms and conditions?</a>
+          </span>
+        </p>
+        <p class="register-submit">
+          <input type="submit" value="Register Now" />
+        </p>
+      </form>
+    </div>
+  );
+}
+
+export default Registrar
