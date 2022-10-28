@@ -1,4 +1,5 @@
 import React from "react";
+import "./App.css"
 
 const Pharmacy = () => {
   return <div>Stock Issues Details
@@ -6,24 +7,25 @@ const Pharmacy = () => {
 
 
     <form class="row g-3 needs-validation" novalidate>
-  <div class="col-md-4 position-relative">
+  <div class="col-xs-3 position-relative">
     <label for="validationTooltip01" class="form-label">Patient name</label>
     <input type="text" class="form-control" id="validationTooltip01"  required/>
       <div class="valid-tooltip">
         Looks good!
       </div>
   </div>
-  <div class="col-md-4 position-relative">
+  <div class="col-xs-3 position-relative" id="item">
     <label for="validationTooltip02" class="form-label">Inventory Item</label>
     <input type="text" class="form-control" id="validationTooltip02"  required/>
+    <div class="col-2">
+    <button id="btn" class="btn btn-primary" type="submit">Add item</button>
+  </div>
     <div class="valid-tooltip">
       Looks good!
     </div>
-  <div class="col-2">
-    <button class="btn btn-primary" type="submit">Add item</button>
+  
   </div>
-  </div>
-  {/* <div class="col-md-4 position-relative">
+  {/* <div class="col]d-4 position-relative">
     <label for="validationTooltipUsername" class="form-label">Username</label>
     <div class="input-group has-validation">
       <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
@@ -33,14 +35,14 @@ const Pharmacy = () => {
       </div>
     </div>
   </div> */}
-  <div class="col-md-6 position-relative">
+  <div class="col-xs-6 position-relative">
     <label for="validationTooltip03" class="form-label">Item</label>
     <input type="text" class="form-control" id="validationTooltip03" required/>
     <div class="invalid-tooltip">
       Please provide a Item.
     </div>
   </div>
-  <div class="col-md-3 position-relative">
+  <div class="col-xs-3 position-relative">
     <label for="validationTooltip04" class="form-label">Quantity</label>
     <input type="text" class="form-control" id="validationTooltip03" required/>
     {/* <select class="form-select" id="validationTooltip04" required>
@@ -51,7 +53,7 @@ const Pharmacy = () => {
       Please provide a quantity.
     </div>
   </div>
-  <div class="col-md-3 position-relative">
+  <div class="col-xs-3 position-relative">
     <label for="validationTooltip05" class="form-label">Discount</label>
     <input type="text" class="form-control" id="validationTooltip05" required/>
     <div class="invalid-tooltip">
@@ -59,14 +61,14 @@ const Pharmacy = () => {
     </div>
   </div>
 
-  <div class="col-md-6 position-relative">
+  <div class="col-xs-6 position-relative">
     <label for="validationTooltip03" class="form-label">Remarks</label>
     <input type="text" class="form-control" id="validationTooltip03" required/>
     <div class="invalid-tooltip">
       Please provide a Remark.
     </div>
   </div>
-  <div class="col-md-3 position-relative">
+  <div class="col-xs-3 position-relative">
     <label for="validationTooltip04" class="form-label">Total amount</label>
     <input type="text" class="form-control" id="validationTooltip03" required/>
     {/* <select class="form-select" id="validationTooltip04" required>
@@ -77,7 +79,7 @@ const Pharmacy = () => {
       Please provide a total amount.
     </div>
   </div>
-  <div class="col-md-3 position-relative">
+  <div class="col-xs-3 position-relative">
     <label for="validationTooltip05" class="form-label">Receipt no</label>
     <input type="text" class="form-control" id="validationTooltip05" required/>
     <div class="invalid-tooltip">
