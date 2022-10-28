@@ -17,10 +17,10 @@ const Doctor = () => {
 
   return (
     <>
-      <TablePatient />
+      <TablePatient/>
 
       <div className="mx-auto mt-4">
-        <TablePatient patients={patients} />
+        {/* <TablePatient patients={patients} /> */}
 
         {/* <TablePatient /> */}
       </div>
