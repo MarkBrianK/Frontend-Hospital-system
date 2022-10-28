@@ -1,26 +1,26 @@
-import React, {useState, useEffect} from "react";
-import TablePatient from '../components/TablePatient'
+import React, { useState, useEffect } from "react";
+import TablePatient from "../components/TablePatient";
 
 const Doctor = () => {
-const [patients, setPatients] = useState([])
+  const [patients, setPatients] = useState([]);
 
-const getPatients = async()=>{
-  const res = await fetch('/patients');
-  const data = await res.json()
-  setPatients(data)
-  // console.log(patients)
-}
+  const getPatients = async () => {
+    const res = await fetch("/patients");
+    const data = await res.json();
+    setPatients(data);
+    console.log(patients);
+  };
 
-useEffect(() => {
-  getPatients()
-}, [])
+  useEffect(() => {
+    getPatients();
+  }, []);
 
   return (
     <>
-      <TablePatient/>
+      <TablePatient />
 
       <div className="mx-auto mt-4">
-        <TablePatient patients={patients}/>
+        <TablePatient patients={patients} />
 
         {/* <TablePatient /> */}
       </div>
@@ -29,6 +29,3 @@ useEffect(() => {
 };
 
 export default Doctor;
-
-
-
