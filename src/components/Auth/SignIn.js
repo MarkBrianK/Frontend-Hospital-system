@@ -25,16 +25,16 @@ const SignIn = ({ setUser }) => {
     email: "",
     password: "",
   });
-// const SignIn = ({ setUser }) => {
-//   // const [password, setPassword] = useState('')
-//   // const [email, setEmail] = useState('')
-//   const [errors, setErrors] = useState([]);
-//   const [formData, setFormData] = useState({
-//     email: "",
-//     password: "",
-//   });
+  // const SignIn = ({ setUser }) => {
+  //   // const [password, setPassword] = useState('')
+  //   // const [email, setEmail] = useState('')
+  //   const [errors, setErrors] = useState([]);
+  //   const [formData, setFormData] = useState({
+  //     email: "",
+  //     password: "",
+  //   });
 
-//   // const navigate = useNavigate();
+  //   // const navigate = useNavigate();
   const onFormInputChanged = (e) => {
     setFormData({
       ...formData,
@@ -42,64 +42,64 @@ const SignIn = ({ setUser }) => {
     });
   };
 
-//   const onFormSubmit = (e) => {
-//     e.preventDefault();
-//     // alert("login success");
-//     // console.log(formData);
+  //   const onFormSubmit = (e) => {
+  //     e.preventDefault();
+  //     // alert("login success");
+  //     // console.log(formData);
 
-//     // post user credentialas to login route
+  //     // post user credentialas to login route
 
-//     fetch("/login", {
-//       method: "POST",
-//       headers: {
-//         "Content-Type": "application/json",
-//       },
-//       body: JSON.stringify(formData),
-//     }).then((res) => {
-//       if (res.ok) {
-//         res.json().then((user) => {
-//           setUser(user);
-//           console.log(user);
-//           alert(errors);
-//         });
-//       } else {
-//         res.json().then((error) => setErrors(error.errors));
-//       }
-//     });
-//   };
+  //     fetch("/login", {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify(formData),
+  //     }).then((res) => {
+  //       if (res.ok) {
+  //         res.json().then((user) => {
+  //           setUser(user);
+  //           console.log(user);
+  //           alert(errors);
+  //         });
+  //       } else {
+  //         res.json().then((error) => setErrors(error.errors));
+  //       }
+  //     });
+  //   };
 
-//   return (
-//     <div className="container text-center">
-//       <div className="row gx-4">
-//         <div className="col border">hello</div>
-//         <form className="col border">
-//           <h1>SignIn</h1>
-//           <input
-//             name="email"
-//             type="email"
-//             className="form-control my-2"
-//             placeholder="type in your email address"
-//             onChange={onFormInputChanged}
-//           ></input>
-//           <input
-//             name="password"
-//             type="password"
-//             className="form-control my-2"
-//             placeholder="PLease enter your password"
-//             onChange={onFormInputChanged}
-//           ></input>
-//           <button
-//             className="btn btn-primary"
-//             type="submit"
-//             onClick={onFormSubmit}
-//           >
-//             Submit
-//           </button>
-//         </form>
-//       </div>
-//     </div>
-//   );
-// };
+  //   return (
+  //     <div className="container text-center">
+  //       <div className="row gx-4">
+  //         <div className="col border">hello</div>
+  //         <form className="col border">
+  //           <h1>SignIn</h1>
+  //           <input
+  //             name="email"
+  //             type="email"
+  //             className="form-control my-2"
+  //             placeholder="type in your email address"
+  //             onChange={onFormInputChanged}
+  //           ></input>
+  //           <input
+  //             name="password"
+  //             type="password"
+  //             className="form-control my-2"
+  //             placeholder="PLease enter your password"
+  //             onChange={onFormInputChanged}
+  //           ></input>
+  //           <button
+  //             className="btn btn-primary"
+  //             type="submit"
+  //             onClick={onFormSubmit}
+  //           >
+  //             Submithttp://localhost:3000
+  //           </button>
+  //         </form>
+  //       </div>
+  //     </div>
+  //   );
+  // };
 
   const onFormSubmit = (e) => {
     e.preventDefault();
@@ -115,8 +115,9 @@ const SignIn = ({ setUser }) => {
       if (res.ok) {
         res.json().then((user) => {
           setUser(user);
-          console.log(user)
-          sessionStorage.setItem("user", JSON.stringify(user))
+          navigate("/home");
+          console.log(user);
+          sessionStorage.setItem("user", JSON.stringify(user));
           console.log(user);
           // alert(errors);
         });
@@ -126,104 +127,107 @@ const SignIn = ({ setUser }) => {
     });
   };
 
-//   return (
-//     <div className="container text-center">
-//       <div className="row gx-4">
-//         <div className="col border">hello</div>
-//         <form className="col border">
-//           <h1>SignIn</h1>
-//           <input
-//             name="email"
-//             type="email"
-//             className="form-control my-2"
-//             placeholder="type in your email address"
-//             onChange={onFormInputChanged}
-//           ></input>
-//           <input
-//             name="password"
-//             type="password"
-//             className="form-control my-2"
-//             placeholder="PLease enter your password"
-//             onChange={onFormInputChanged}
-//           ></input>
-//           <button
-//             className="btn btn-primary"
-//             type="submit"
-//             onClick={onFormSubmit}
-//           >
-//             Submit
-//           </button>
-//         </form>
-//       </div>
-//     </div>
-//   );
-// };
+  //   return (
+  //     <div className="container text-center">
+  //       <div className="row gx-4">
+  //         <div className="col border">hello</div>
+  //         <form className="col border">
+  //           <h1>SignIn</h1>
+  //           <input
+  //             name="email"
+  //             type="email"
+  //             className="form-control my-2"
+  //             placeholder="type in your email address"
+  //             onChange={onFormInputChanged}
+  //           ></input>
+  //           <input
+  //             name="password"
+  //             type="password"
+  //             className="form-control my-2"
+  //             placeholder="PLease enter your password"
+  //             onChange={onFormInputChanged}
+  //           ></input>
+  //           <button
+  //             className="btn btn-primary"
+  //             type="submit"
+  //             onClick={onFormSubmit}
+  //           >
+  //             Submit
+  //           </button>
+  //         </form>
+  //       </div>
+  //     </div>
+  //   );
+  // };
 
-// export default SignIn;
+  // export default SignIn;
 
+  //==================================MUI Starts here ===================================
 
-//==================================MUI Starts here ===================================
+  // import * as React from 'react';
+  // import Avatar from '@mui/material/Avatar';
+  // import Button from '@mui/material/Button';
+  // import CssBaseline from '@mui/material/CssBaseline';
+  // import TextField from '@mui/material/TextField';
+  // import FormControlLabel from '@mui/material/FormControlLabel';
+  // import Checkbox from '@mui/material/Checkbox';
+  // import Link from '@mui/material/Link';
+  // import Grid from '@mui/material/Grid';
+  // import Box from '@mui/material/Box';
+  // //import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
+  // import Typography from '@mui/material/Typography';
+  // import Container from '@mui/material/Container';
+  // import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-// import * as React from 'react';
-// import Avatar from '@mui/material/Avatar';
-// import Button from '@mui/material/Button';
-// import CssBaseline from '@mui/material/CssBaseline';
-// import TextField from '@mui/material/TextField';
-// import FormControlLabel from '@mui/material/FormControlLabel';
-// import Checkbox from '@mui/material/Checkbox';
-// import Link from '@mui/material/Link';
-// import Grid from '@mui/material/Grid';
-// import Box from '@mui/material/Box';
-// //import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
-// import Typography from '@mui/material/Typography';
-// import Container from '@mui/material/Container';
-// import { createTheme, ThemeProvider } from '@mui/material/styles';
+  function Copyright(props) {
+    return (
+      <Typography
+        variant="body2"
+        color="text.secondary"
+        align="center"
+        {...props}
+      >
+        {"Copyright © "}
+        <Link color="inherit" href="https://mui.com/">
+          Your Website
+        </Link>{" "}
+        {new Date().getFullYear()}
+        {"."}
+      </Typography>
+    );
+  }
 
-function Copyright(props) {
-  return (
-    <Typography variant="body2" color="text.secondary" align="center" {...props}>
-      {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
+  const theme = createTheme();
 
-const theme = createTheme();
+  // fetch("http://localhost:3000/users/signin", {
+  //   method: "POST",
+  //   headers: {
+  //     "Content-Type": "application/json",
+  //   },
+  //   body: JSON.stringify(formData),
+  // }).then((res) => {
+  //   if (res.ok) {
+  //     res.json().then((user) => {
+  //       setUser(user);
 
+  //       // console.log(user);
+  //       // navigate("/home");
 
-    // fetch("http://localhost:3000/users/signin", {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify(formData),
-    // }).then((res) => {
-    //   if (res.ok) {
-    //     res.json().then((user) => {
-    //       setUser(user);
+  //     });
+  //   } else {
+  //     res.json().then((error) => setErrors(error.errors));
+  //   }
 
-    //       // console.log(user);
-    //       // navigate("/home");
-        
-    //     });
-    //   } else {
-    //     res.json().then((error) => setErrors(error.errors));
-    //   }
-
-    // });
-// export default function SignIn() {
-//   const handleSubmit = (event) => {
-//     event.preventDefault();
-//     const data = new FormData(event.currentTarget);
-//     console.log({
-//       email: data.get('email'),
-//       password: data.get('password'),
-// >>>>>>> 5a35d30515cffeb44155cff81538ef081e85c8f8
-//     });
+  // });
+  // export default function SignIn() {
+  //   const handleSubmit = (event) => {
+  //     event.preventDefault();
+  //     const data = new FormData(event.currentTarget);
+  //     console.log({
+  //       email: data.get('email'),
+  //       password: data.get('password'),
+  // >>>>>>> 5a35d30515cffeb44155cff81538ef081e85c8f8
+  //     });
 
   return (
     <ThemeProvider theme={theme}>
