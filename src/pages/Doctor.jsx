@@ -5,7 +5,7 @@ const Doctor = () => {
 const [patients, setPatients] = useState([])
 
 const getPatients = async()=>{
-  const res = await fetch('http://localhost:3000/patients');
+  const res = await fetch('/patients');
   const data = await res.json()
   setPatients(data)
   // console.log(patients)

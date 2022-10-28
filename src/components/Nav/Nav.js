@@ -12,14 +12,14 @@ import {
 import { NavLink } from "react-router-dom";
 
 const Nav = ({ setUser, user }) => {
-  // console.log(user)
+  console.log(user)
   const navigate = useNavigate()
   const onHandleLogoutClick = () => {
-    fetch("http://localhost:3000/users/signout", {
+    fetch("/users/signout", {
       method: "DELETE",
     }).then((res) => {
       if (res.ok) {
-        setUser(null);
+        user && setUser(null);
         alert("successfully logged out");
         navigate("/");
       }

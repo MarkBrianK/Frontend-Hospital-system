@@ -105,7 +105,7 @@ const SignIn = ({ setUser }) => {
     e.preventDefault();
     // post user credentialas to login route
 
-    fetch("http://localhost:3000/users/signin", {
+    fetch("/users/signin", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -29,7 +29,7 @@ const SignUp = ({ setLogin }) => {
 
   const onFormSubmit = (e) => {
     e.preventDefault();
-    fetch("http://localhost:3000/users/signup", {
+    fetch("/users/signup", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
