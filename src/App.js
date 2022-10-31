@@ -11,6 +11,7 @@ import Registrar from "./pages/Registrar";
 import Laboratory from "./pages/Laboratory";
 import Header from "./components/Nav/Header";
 import "./pages/App.css"
+import Manager from "./pages/Manager";
 // import TestNav from "./components/TestNav";
 const App = () =>{
   const [user, setUser] = useState(null);
@@ -29,6 +30,7 @@ const App = () =>{
             <Route path="/pharmacy" element={<Pharmacy />} />
             <Route path="/doctor" element={<Doctor />} />
             <Route path="/registrar" element={<Registrar />} />
+            <Route path="/manager" element={<Manager />} />
             <Route path="/patient" element={<Patient />} />
             <Route path="/laboratory" element={<Laboratory />} />
             <Route
