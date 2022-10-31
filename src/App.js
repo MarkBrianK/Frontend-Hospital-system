@@ -5,7 +5,7 @@ import SignUp from "./components/Auth/SignUp";
 import Nav from "./components/Nav/Nav";
 import Doctor from "./pages/Doctor";
 import Home from "./pages/Home";
-import Patient from "./pages/Patient";
+import Patient from "./pages/Shift";
 import Pharmacy from "./pages/Pharmacy";
 import Registrar from "./pages/Registrar";
 import Laboratory from "./pages/Laboratory";

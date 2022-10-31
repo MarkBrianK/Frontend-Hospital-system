@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import TableShift from "../components/TableShift";
 
-const Patient = () => {
+const Shift = () => {
   const [shifts, setShifts] = useState([]);
 
   const getShifts = async () => {
@@ -28,4 +28,4 @@ const Patient = () => {
   );
 };
 
-export default Patient;
+export default Shift;
