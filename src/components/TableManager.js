@@ -163,4 +163,4 @@ const TableManager = ({ managers }) => {
     </MDBTable>
   );
 };
-export default TableAdmin;
+export default TableManager;
