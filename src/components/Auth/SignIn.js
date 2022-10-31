@@ -297,9 +297,9 @@ const SignIn = ({ setUser }) => {
                 </Link> */}
               </Grid>
               <Grid item>
-                <Link to="/signup" variant="body2" className="pe-auto">
+                <NavLink to="/signup" variant="body2" className="pe-auto">
                   Don't have an account? Sign Up
-                </Link>
+                </NavLink>
               </Grid>
             </Grid>
           </Box>

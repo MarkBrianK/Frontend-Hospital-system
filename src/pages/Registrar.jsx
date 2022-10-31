@@ -56,7 +56,7 @@ const Registrar=(props)=>{
 
   }
   function handleSubmit(e){
-    
+
 
   }
 
@@ -119,7 +119,7 @@ const Registrar=(props)=>{
         </label>
         <span class="info">Do you agree to the <a href="/#">terms and conditions?</a></span>
 				</p>
-				<p class="register-submit"><input type="submit" value="Register Now"/></p>
+
 			</form>
     </div>
   )
