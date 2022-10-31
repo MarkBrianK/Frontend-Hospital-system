@@ -1,173 +1,182 @@
-// import React from "react";
+import React from "react";
+import { useParams } from "react-router-dom";
+import {
+  MDBBtn,
+  MDBTable,
+  MDBTableHead,
+  MDBTableBody,
+} from "mdb-react-ui-kit";
+import {CiEdit} from 'react-icons/ci'
+import {RiDeleteBin6Fill} from 'react-icons/ri'
 
-// const Doctor = () => {
-//   return <div>Wabebee</div>;
-// };
-
-// export default Doctor;
-
-
-import { Table, Row, Col, Tooltip, User, Text } from "@nextui-org/react";
-import { StyledBadge } from "./assets/icons/StyledBadge";
-import { IconButton } from "./assets/icons/iconButton";
-import { EyeIcon } from "./assets/icons/eyeIcon";
-import { EditIcon } from "./assets/icons/EditIcon";
-import { DeleteIcon } from "./assets/icons/DeleteIcon";
-
-export default function TablePatient({patients}) {
-  const columns = [
-    { name: "NAME", uid: "name" },
-    { name: "ROLE", uid: "role" },
-    { name: "STATUS", uid: "status" },
-    { name: "ACTIONS", uid: "actions" },
-  ];
-  const users = [
-    {
-      id: 1,
-      name: "Tony Reichert",
-      role: "CEO",
-      team: "Management",
-      status: "active",
-      age: "29",
-      avatar: "https://i.pravatar.cc/150?u=a042581f4e29026024d",
-      email: "tony.reichert@example.com",
-    },
-    {
-      id: 2,
-      name: "Zoey Lang",
-      role: "Technical Lead",
-      team: "Development",
-      status: "paused",
-      age: "25",
-      avatar: "https://i.pravatar.cc/150?u=a042581f4e29026704d",
-      email: "zoey.lang@example.com",
-    },
-    {
-      id: 3,
-      name: "Jane Fisher",
-      role: "Senior Developer",
-      team: "Development",
-      status: "active",
-      age: "22",
-      avatar: "https://i.pravatar.cc/150?u=a04258114e29026702d",
-      email: "jane.fisher@example.com",
-    },
-    {
-      id: 4,
-      name: "William Howard",
-      role: "Community Manager",
-      team: "Marketing",
-      status: "vacation",
-      age: "28",
-      avatar: "https://i.pravatar.cc/150?u=a048581f4e29026701d",
-      email: "william.howard@example.com",
-    },
-    {
-      id: 5,
-      name: "Kristen Copper",
-      role: "Sales Manager",
-      team: "Sales",
-      status: "active",
-      age: "24",
-      avatar: "https://i.pravatar.cc/150?u=a092581d4ef9026700d",
-      email: "kristen.cooper@example.com",
-    },
-  ];
-
-  // patients.map((patient) => {
-  //   const { name, role, status, age, avatar, email } = patient;
-  // })
-  const renderCell = (user, columnKey) => {
-    const cellValue = user[columnKey];
-    switch (columnKey) {
-      case "name":
-        return (
-          <User squared src={user.avatar} name={cellValue} css={{ p: 0 }}>
-            {user.email}
-          </User>
-        );
-      case "role":
-        return (
-          <Col>
-            <Row>
-              <Text b size={14} css={{ tt: "capitalize" }}>
-                {cellValue}
-              </Text>
-            </Row>
-            <Row>
-              <Text b size={13} css={{ tt: "capitalize", color: "$accents7" }}>
-                {user.team}
-              </Text>
-            </Row>
-          </Col>
-        );
-      case "status":
-        return <StyledBadge type={user.status}>{cellValue}</StyledBadge>;
-
-      case "actions":
-        return (
-          <Row justify="center" align="center">
-            <Col css={{ d: "flex" }}>
-              <Tooltip content="Details">
-                <IconButton onClick={() => console.log("View user", user.id)}>
-                  <EyeIcon size={20} fill="#979797" />
-                </IconButton>
-              </Tooltip>
-            </Col>
-            <Col css={{ d: "flex" }}>
-              <Tooltip content="Edit user">
-                <IconButton onClick={() => console.log("Edit user", user.id)}>
-                  <EditIcon size={20} fill="#979797" />
-                </IconButton>
-              </Tooltip>
-            </Col>
-            <Col css={{ d: "flex" }}>
-              <Tooltip
-                content="Delete user"
-                color="error"
-                onClick={() => console.log("Delete user", user.id)}
-              >
-                <IconButton>
-                  <DeleteIcon size={20} fill="#FF0080" />
-                </IconButton>
-              </Tooltip>
-            </Col>
-          </Row>
-        );
-      default:
-        return cellValue;
-    }
+const TablePatients = ({ patients }) => {
+  const { id } = useParams();
+  const handleDelete = () => {
+    console.log(id)
+    fetch(`/patients/${id}`, {
+      // mode: 'no-cors',
+      method: "DELETE",
+    }).then(() => {
+      console.log(id);
+    });
   };
-  return (
-    <Table
-      aria-label="Example table with custom cells"
-      css={{
-        height: "auto",
-        minWidth: "100%",
-      }}
-      selectionMode="none"
-    >
-      <Table.Header columns={columns}>
-        {(column) => (
-          <Table.Column
-            key={column.uid}
-            hideHeader={column.uid === "actions"}
-            align={column.uid === "actions" ? "center" : "start"}
-          >
-            {column.name}
-          </Table.Column>
-        )}
-      </Table.Header>
-      <Table.Body items={users}>
-        {(item) => (
-          <Table.Row>
-            {(columnKey) => (
-              <Table.Cell>{renderCell(item, columnKey)}</Table.Cell>
-            )}
-          </Table.Row>
-        )}
-      </Table.Body>
-    </Table>
-  );
-}
 
+
+  return (
+    <MDBTable align="middle">
+      <MDBTableHead className="sticky-top">
+        <tr className="table-dark">
+          <th scope="col">Ticcket Number</th>
+          <th scope="col">Patient Number</th>
+          <th scope="col">Registration Date</th>
+          <th scope="col">Address</th>
+          <th scope="col">DoB</th>
+          <th scope="col">Contact Number</th>
+          <th scope="col">Email</th>
+          <th scope="col">Guardian</th>
+          <th scope="col">Relation</th>
+          <th scope="col">Gender</th>
+          <th scope="col">Status</th>
+          <th scope="col" colSpan={2}>
+            Action
+          </th>
+        </tr>
+      </MDBTableHead>
+      <MDBTableBody>
+        {patients.map((patient) => {
+          return (
+            <tr>
+              <td>
+                <div className="d-flex align-items-center">
+                  <img
+                    src="https://mdbootstrap.com/img/new/avatars/8.jpg"
+                    alt=""
+                    style={{ width: "45px", height: "45px" }}
+                    className="rounded-circle"
+                  />
+                  <div className="ms-3">
+                    <p className="fw-bold mb-1">{patient.ticket_no}</p>
+                    <p className="text-muted mb-0"></p>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <p className="fw-normal mb-1">{patient.patient_no}</p>
+                {/* <p className="text-muted mb-0">IT department</p> */}
+              </td>
+              <td>
+                <p className="fw-normal mb-1">{patient.reg_date}</p>
+                {/* <p className="text-muted mb-0">IT department</p> */}
+              </td>
+              <td>
+                <p className="fw-normal mb-1">{patient.address}</p>
+                {/* <p className="text-muted mb-0">IT department</p> */}
+              </td>
+              <td>
+                <p className="fw-normal mb-1">{patient.dob}</p>
+                {/* <p className="text-muted mb-0">IT department</p> */}
+              </td>
+              <td>
+                <p className="fw-normal mb-1">{patient.contact_no}</p>
+                {/* <p className="text-muted mb-0">IT department</p> */}
+              </td>
+              <td>
+                <p className="fw-normal mb-1">{patient.email}</p>
+                {/* <p className="text-muted mb-0">IT department</p> */}
+              </td>
+              <td>
+                <p className="fw-normal mb-1">{patient.guardian}</p>
+                {/* <p className="text-muted mb-0">IT department</p> */}
+              </td>
+              <td>
+                <p className="fw-normal mb-1">{patient.relation}</p>
+                {/* <p className="text-muted mb-0">IT department</p> */}
+              </td>
+              <td>
+                <p className="fw-normal mb-1">{patient.gender}</p>
+                {/* <p className="text-muted mb-0">IT department</p> */}
+              </td>
+              <td>
+                <p className="fw-normal mb-1">{patient.patient_status}</p>
+                {/* <p className="text-muted mb-0">IT department</p> */}
+              </td>
+              <td>
+                <MDBBtn color="link" rounded size="sm" onClick={handleDelete}>
+                  <CiEdit />
+                </MDBBtn>
+              </td>
+              <td>
+                <MDBBtn color="link" rounded size="sm">
+                  <RiDeleteBin6Fill />
+                </MDBBtn>
+              </td>
+            </tr>
+          );
+        })}
+        {/* <tr>
+          <td>
+            <div className="d-flex align-items-center">
+              <img
+                src="https://mdbootstrap.com/img/new/avatars/6.jpg"
+                alt=""
+                style={{ width: "45px", height: "45px" }}
+                className="rounded-circle"
+              />
+              <div className="ms-3">
+                <p className="fw-bold mb-1">Alex Ray</p>
+                <p className="text-muted mb-0">alex.ray@gmail.com</p>
+              </div>
+            </div>
+          </td>
+          <td>
+            <p className="fw-normal mb-1">Consultant</p>
+            <p className="text-muted mb-0">Finance</p>
+          </td>
+          <td>
+            <MDBBadge color="primary" pill>
+              Onboarding
+            </MDBBadge>
+          </td>
+          <td>Junior</td>
+          <td>
+            <MDBBtn color="link" rounded size="sm">
+              Edit
+            </MDBBtn>
+          </td>
+        </tr> */}
+        {/* <tr>
+          <td>
+            <div className="d-flex align-items-center">
+              <img
+                src="https://mdbootstrap.com/img/new/avatars/7.jpg"
+                alt=""
+                style={{ width: "45px", height: "45px" }}
+                className="rounded-circle"
+              />
+              <div className="ms-3">
+                <p className="fw-bold mb-1">Kate Hunington</p>
+                <p className="text-muted mb-0">kate.hunington@gmail.com</p>
+              </div>
+            </div>
+          </td>
+          <td>
+            <p className="fw-normal mb-1">Designer</p>
+            <p className="text-muted mb-0">UI/UX</p>
+          </td>
+          <td>
+            <MDBBadge color="warning" pill>
+              Awaiting
+            </MDBBadge>
+          </td>
+          <td>Senior</td>
+          <td>
+            <MDBBtn color="link" rounded size="sm">
+              Edit
+            </MDBBtn>
+          </td>
+        </tr> */}
+      </MDBTableBody>
+    </MDBTable>
+  );
+};
+export default TablePatients;

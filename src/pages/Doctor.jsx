@@ -17,7 +17,7 @@ const Doctor = () => {
 
   return (
     <>
-      <TablePatient/>
+      <TablePatient patients={patients}/>
 
       <div className="mx-auto mt-4">
         {/* <TablePatient patients={patients} /> */}
