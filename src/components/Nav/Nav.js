@@ -34,6 +34,12 @@ const Nav = ({ setUser, user }) => {
             </CDBSidebarHeader>
             <CDBSidebarContent className="sidebar-content">
               <CDBSidebarMenu>
+              <NavLink exact to="/admin" activeClassName="activeClicked">
+                  <CDBSidebarMenuItem icon="columns">
+                    <p>Admin</p>
+                  </CDBSidebarMenuItem>{" "}
+                  <br></br>
+                </NavLink>
                 <NavLink exact to="/pharmacy" activeClassName="activeClicked">
                   <CDBSidebarMenuItem icon="columns">
                     <p>Pharmacy</p>
