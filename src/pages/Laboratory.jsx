@@ -14,13 +14,13 @@ const Laboratory = () => {
             <label for="exampleInputTextname" class="form-label mt-4">Cost Of Test</label>
             <input type="textName" class="form-control" id="exampleInputTextname" />
           </div>
-         
-          
+
+
           <div class="form-group">
             <label for="exampleTextarea" class="form-label mt-4">Description</label>
             <textarea class="form-control" id="exampleTextarea" rows="4"></textarea>
           </div>
-          
+
           <button type="submit" class="btn btn-success">Create</button>
         </fieldset>
       </form>

@@ -12,6 +12,23 @@ import Checkbox from "@mui/material/Checkbox";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 //import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
+// import Typography from '@mui/material/Typography';
+// import Container from '@mui/material/Container';
+// import { createTheme, ThemeProvider } from '@mui/material/styles';
+// import { Button } from '@mui/material';
+import { NavLink } from 'react-router-dom';
+// function Copyright(props) {
+//   return (
+//     <Typography variant="body2" color="text.secondary" align="center" {...props}>
+//       {'Copyright © '}
+//       <Link color="inherit" href="https://mui.com/">
+//         Your Website
+//       </Link>{' '}
+//       {new Date().getFullYear()}
+//       {'.'}
+//     </Typography>
+//   );
+// }
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
@@ -169,6 +186,7 @@ const SignUp = ({ setLogin }) => {
                   label="User Name"
                   name="username"
                   autoComplete="family-name"
+
                   onChange={onFormInputChanged}
                 />
               </Grid>
@@ -228,9 +246,11 @@ const SignUp = ({ setLogin }) => {
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item>
-                <Link to="/signin" variant="body2">
+                                <NavLink exact to ="/signin"variant="body2">
+ <Link to="/signin" variant="body2">
                   Already have an account? Sign in
-                </Link>
+                  </Link>
+                </NavLink>
               </Grid>
             </Grid>
           </Box>

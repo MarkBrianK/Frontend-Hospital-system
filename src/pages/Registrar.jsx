@@ -7,7 +7,7 @@ const Registrar=(props)=>{
 
 
 
-  <div id="registrar" className="form-wrapper"> 
+  <div id="registrar" className="form-wrapper">
     <form action="#non" method="post" className="fcorn-register container">
       <p className="register-info">Note: All fields are required.</p>
       <div className="row">
@@ -28,7 +28,6 @@ const Registrar=(props)=>{
         <p className="col-md-12"><input type="text" placeholder="Parent/Guardian contact"/><span className="extern-type">For emergencies</span></p>
       </div>
       <div className="row"/>
-        <div className="col-md-6 city-wrap"/>
 
           <div>
            <label> Gender
@@ -41,9 +40,9 @@ const Registrar=(props)=>{
           </label>
         </div>
 
-      
-        
-        
+
+
+
         <div>
 
           <p className="col-xs-12"><form action="upload.php" method="post" enctype="multipart/form-data"/>
