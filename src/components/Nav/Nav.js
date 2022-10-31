@@ -8,8 +8,10 @@ import {
   CDBSidebarHeader,
   CDBSidebarMenu,
   CDBSidebarMenuItem,
-} from "cdbreact";
-import { NavLink } from "react-router-dom";
+  CDBSidebarFooter,
+} from 'cdbreact';
+
+import { NavLink, Link } from "react-router-dom";
 
 const Nav = ({ setUser, user }) => {
   console.log(user)
@@ -27,7 +29,7 @@ const Nav = ({ setUser, user }) => {
   };
 
   return (
- 
+
           <CDBSidebar textColor="black" backgroundColor="#E9E6E9">
             <CDBSidebarHeader prefix={<i className="fa fa-bars fa-large"></i>}>
               <p>Main Navigation</p>
@@ -68,8 +70,8 @@ const Nav = ({ setUser, user }) => {
               </CDBSidebarMenu>
             </CDBSidebarContent>
           </CDBSidebar>
-     
-   
+
+
   );
 };
 export default Nav;
