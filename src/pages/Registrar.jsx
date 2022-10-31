@@ -1,7 +1,67 @@
-import React from "react"
+import React, {useState} from "react"
 import "../pages/App.css"
 
 const Registrar=(props)=>{
+  const [patient, setPatient] = useState("")
+  const [ticket, setTicket] = useState("")
+  const [ registrationDate, setRegistrationDate]= useState("")
+  const [address, setAddress] = useState("")
+  const [birthdate, setBirthdate] = useState("")
+  const [contact, setContact] = useState("")
+  const [email, setEmail] = useState("")
+  const [guardian, setGuardian] = useState("")
+  const [relation, setRelation] = useState("")
+  const [gender, setGender] = useState("")
+  const [status, setStatus] = useState("")
+
+
+  function handleTicket(event) {
+    setTicket(event.target.value);
+
+  }
+  function handleRegistration(event) {
+    setRegistrationDate(event.target.value);
+
+  }
+  function handleAddress(event) {
+    setAddress(event.target.value);
+
+  }
+  function handleBirthdate(event) {
+    setBirthdate(event.target.value);
+
+  }
+  function handleContact(event) {
+    setContact(event.target.value);
+
+  }
+  function handleEmail(event) {
+    setEmail(event.target.value);
+
+  }
+  function handleGuardian(event) {
+    setGuardian(event.target.value);
+
+  }
+  function handleRelation(event) {
+    setRelation(event.target.value);
+
+  }
+  function handleGender(event) {
+    setGender(event.target.value);
+
+  }
+  function handleStatus(event) {
+    setStatus(event.target.value);
+
+  }
+  function handleSubmit(e){
+    
+
+  }
+
+
+
   return(
 //
 
