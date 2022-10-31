@@ -57,7 +57,7 @@ const Tableshift = ({ shifts }) => {
                 </div>
               </td>
               <td>
-                <p className="fw-normal mb-1">{shift.Job_Description}</p>
+                <p className="fw-normal mb-1">{shift.Job_description}</p>
                 {/* <p className="text-muted mb-0">IT department</p> */}
               </td>
               <td>
@@ -69,19 +69,16 @@ const Tableshift = ({ shifts }) => {
                 {/* <p className="text-muted mb-0">IT department</p> */}
               </td>
               <td>
-                <p className="fw-normal mb-1">{shift.Start_Time}</p>
+                <p className="fw-normal mb-1">{shift.Start_time}</p>
                 {/* <p className="text-muted mb-0">IT department</p> */}
               </td>
               <td>
-                <p className="fw-normal mb-1">{shift.End_Time}</p>
+                <p className="fw-normal mb-1">{shift.End_time}</p>
                 {/* <p className="text-muted mb-0">IT department</p> */}
               </td>
+              
               <td>
-                <p className="fw-normal mb-1">{shift.email}</p>
-                {/* <p className="text-muted mb-0">IT department</p> */}
-              </td>
-              <td>
-                <p className="fw-normal mb-1">{shift.shift_status}</p>
+                <p className="fw-normal mb-1">{shift.Status}</p>
                 {/* <p className="text-muted mb-0">IT department</p> */}
               </td>
               <td>
