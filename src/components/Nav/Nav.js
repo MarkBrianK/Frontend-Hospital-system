@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {MdLocalPharmacy} from 'react-icons/md'
 import "../Nav/Nav.css";
 import { useNavigate } from "react-router-dom";
 import "react-calendar/dist/Calendar.css";
@@ -42,7 +43,7 @@ const Nav = ({ setUser, user }) => {
                 </NavLink>
                 <NavLink exact to="/pharmacy" activeClassName="activeClicked">
                   <CDBSidebarMenuItem icon="columns">
-                    <p>Pharmacy</p>
+                     <p>Pharmacy</p>
                   </CDBSidebarMenuItem>{" "}
                   <br></br>
                 </NavLink>
@@ -60,7 +61,7 @@ const Nav = ({ setUser, user }) => {
                 </NavLink>
                 <NavLink exact to="/patient" activeClassName="activeClicked">
                   <CDBSidebarMenuItem icon="columns">
-                    <p>Patient</p>
+                    <p>Shift</p>
                   </CDBSidebarMenuItem>
                   <br></br>
                 </NavLink>
