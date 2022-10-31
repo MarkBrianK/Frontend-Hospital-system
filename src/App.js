@@ -10,6 +10,7 @@ import Pharmacy from "./pages/Pharmacy";
 import Registrar from "./pages/Registrar";
 import Laboratory from "./pages/Laboratory";
 import Header from "./components/Nav/Header";
+import Admin from "./pages/Admin";
 import "./pages/App.css"
 // import TestNav from "./components/TestNav";
 const App = () =>{
@@ -26,6 +27,7 @@ const App = () =>{
         <div class="d-flex col-10 w-75 m-auto ">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/admin" element={<Admin />} />
             <Route path="/pharmacy" element={<Pharmacy />} />
             <Route path="/doctor" element={<Doctor />} />
             <Route path="/registrar" element={<Registrar />} />
