@@ -28,7 +28,7 @@
 //   };
 
 //   return (
- 
+
 //           <CDBSidebar textColor="black" backgroundColor="#E9E6E9">
 //             <CDBSidebarHeader prefix={<i className="fa fa-bars fa-large"></i>}>
 //               <p>Main Navigation</p>
@@ -75,8 +75,8 @@
 //               </CDBSidebarMenu>
 //             </CDBSidebarContent>
 //           </CDBSidebar>
-     
-   
+
+
 //   );
 // };
 // export default Nav;
@@ -205,7 +205,7 @@ export default function MiniDrawer() {
           >
 
             <MenuIcon />
-           
+
           </IconButton>
           <Typography variant="h6" noWrap component="div">
             Main Navigation
@@ -224,35 +224,35 @@ export default function MiniDrawer() {
                 <p>Admin</p>
                 </NavLink>,
                 <NavLink exact to="/pharmacy" activeClassName="activeClicked">
-                 
+
                 <p>Pharmacy</p>
-    
-              
+
+
             </NavLink>,
             <NavLink exact to="/doctor" activeClassName="activeClicked">
-                 
+
             <p>Doctor</p>
 
-         
+
         </NavLink>,
-        
+
          <NavLink exact to="/registrar" activeClassName="activeClicked">
-                 
+
          <p>Registrar</p>
 
-      
+
      </NavLink>,
         <NavLink exact to="/patient" activeClassName="activeClicked">
-                 
+
         <p>Shift</p>
 
     </NavLink>,
-  
- 
+
+
     <NavLink exact to="/laboratory" activeClassName="activeClicked">
-                 
+
     <p>Laboratory</p>
- 
+
 </NavLink>].map((text, index) => (
             <ListItem key={text} disablePadding sx={{ display: 'block' }}>
               <ListItemButton
@@ -270,7 +270,7 @@ export default function MiniDrawer() {
                   }}
                 >
                    {index % 2 === 0 ? <ManIcon /> : <ScienceOutlinedIcon />}
-                
+
                 </ListItemIcon>
                 <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
               </ListItemButton>
@@ -279,12 +279,12 @@ export default function MiniDrawer() {
            <Divider />
           <button>Logout</button>
         </List>
-        
-        
+
+
       </Drawer>
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
         <DrawerHeader />
-        
+
       </Box>
     </Box>
   );
