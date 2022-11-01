@@ -4,6 +4,7 @@ import SignIn from "./components/Auth/SignIn";
 import SignUp from "./components/Auth/SignUp";
 import Nav from "./components/Nav/Nav";
 import Doctor from "./pages/Doctor";
+import PatientDetails from './components/PatientDetails'
 import Home from "./pages/Home";
 import Patient from "./pages/Patient";
 import Pharmacy from "./pages/Pharmacy";
@@ -15,15 +16,18 @@ import "./pages/App.css"
 const App = () =>{
   const [user, setUser] = useState(null);
   const [login, setLogin] = useState(null);
+
+  // if(!user){
+  //   return(<SignIn/>)
+  // }
   return (
     <div>
       <Header />
       <div class="row">
         <div className="col-2 sticky-top">
-          <Nav />
-          {/* <TestNav /> */}
+          <Nav user={user}/>
         </div>
-        <div class="d-flex col-10 w-75 m-auto ">
+        <div class="d-flex col-10 w-90 m-auto ">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/pharmacy" element={<Pharmacy />} />
@@ -31,6 +35,7 @@ const App = () =>{
             <Route path="/registrar" element={<Registrar />} />
             <Route path="/patient" element={<Patient />} />
             <Route path="/laboratory" element={<Laboratory />} />
+            <Route path='/patientdetails/:id' element={<PatientDetails/>}/>
             <Route
               path="/signin"
               element={<SignIn user={user} setUser={setUser} />}

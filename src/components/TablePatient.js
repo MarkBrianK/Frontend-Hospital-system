@@ -1,4 +1,7 @@
-import React from "react";
+import React, {useState} from "react";
+// import useFetch from '../customHooks/UseFetch'
+import useFetch from "../customHooks/UseFetch";
+import ReadOnly from "./ReadOnlyRow";
 import { useParams } from "react-router-dom";
 import {
   MDBBtn,
@@ -6,27 +9,97 @@ import {
   MDBTableHead,
   MDBTableBody,
 } from "mdb-react-ui-kit";
-import {CiEdit} from 'react-icons/ci'
-import {RiDeleteBin6Fill} from 'react-icons/ri'
+import EditableRow from "./EditableRow";
+const TablePatients = ({ patients, handleDelete }) => {   
 
-const TablePatients = ({ patients }) => {
-  const { id } = useParams();
-  const handleDelete = () => {
-    console.log(id)
-    fetch(`/patients/${id}`, {
-      // mode: 'no-cors',
-      method: "DELETE",
-    }).then(() => {
-      console.log(id);
-    });
+const [editPatientId, setEditPatientId] = useState(null)
+
+const [editFormData, setEditFormData] = useState({
+  ticket_no:'',
+  patient_no:'',
+  reg_date:'',
+  address:'',
+  dob:'',
+  contact_no:'',
+  email:'',
+  guardian:'',
+  relation:'',
+  gender:'',
+  patient_status:'',
+  name:'',
+
+})
+
+const handleEditFormSUbmit = (e) => {
+  e.preventDefault()
+  const editedPatient = {
+    ticket_no: editFormData.ticket_no,
+    patient_no: editFormData.patient_no,
+    reg_date: editFormData.reg_date,
+    address: editFormData.address,
+    dob: editFormData.dob,
+    contact_no: editFormData.contact_no,
+    email: editFormData.email,
+    guardian: editFormData.guardian,
+    relation: editFormData.relation,
+    gender: editFormData.guardian,
+    patient_status: editFormData.patient_status,
+    name: editFormData.name,
   };
+}
+
+// ============function to edit the form=======================
+
+const handleEditFormChange = (event) => {
+  event.preventDefault()
+  const fieldName = event.target.getAttribute('name');
+  const fieldValue = event.target.value;
+  const newFormData = { ...editFormData };
+  newFormData[fieldName] = fieldValue
+  setEditFormData(newFormData)
+}
+
+  const handleEditClick = (e, patient) => {
+    e.preventDefault()
+    setEditPatientId(patient.id)
+
+    const formValues = {
+      ticket_no: patient.ticket_no,
+      patient_no: patient.patient_no,
+      reg_date: patient.reg_date,
+      address: patient.address,
+      dob: patient.dob,
+      contact_no: patient.contact_no,
+      email: patient.email,
+      guardian: patient.guardian,
+      relation: patient.relation,
+      gender: patient.gender,
+      patient_status: patient.status,
+      name: patient.name
+    };
+      setEditFormData(formValues);
+
+  }
+  const { id } = useParams();
+  //  const { data: patient, error, loading } = useFetch("/patients/" + id);
+  // const handleDelete = () => {
+  //   console.log('delete')
+  //   fetch(`/patients/${id}`, {
+  //     // mode: 'no-cors',
+  //     method: "DELETE",
+  //   }).then(() => {
+  //     console.log(id);
+  //   });
+  //   console.log(patient.id)
+  // };
 
 
   return (
+    <form>
     <MDBTable align="middle">
       <MDBTableHead className="sticky-top">
         <tr className="table-dark">
-          <th scope="col">Ticcket Number</th>
+          <th scope="col">Ticket Number</th>
           <th scope="col">Patient Number</th>
           <th scope="col">Registration Date</th>
           <th scope="col">Address</th>
@@ -43,74 +116,17 @@ const TablePatients = ({ patients }) => {
         </tr>
       </MDBTableHead>
       <MDBTableBody>
-        {patients.map((patient) => {
+        {patients && patients.map((patient) => {
           return (
-            <tr>
-              <td>
-                <div className="d-flex align-items-center">
-                  <img
-                    src="https://mdbootstrap.com/img/new/avatars/8.jpg"
-                    alt=""
-                    style={{ width: "45px", height: "45px" }}
-                    className="rounded-circle"
-                  />
-                  <div className="ms-3">
-                    <p className="fw-bold mb-1">{patient.ticket_no}</p>
-                    <p className="text-muted mb-0"></p>
-                  </div>
-                </div>
-              </td>
-              <td>
-                <p className="fw-normal mb-1">{patient.patient_no}</p>
-                {/* <p className="text-muted mb-0">IT department</p> */}
-              </td>
-              <td>
-                <p className="fw-normal mb-1">{patient.reg_date}</p>
-                {/* <p className="text-muted mb-0">IT department</p> */}
-              </td>
-              <td>
-                <p className="fw-normal mb-1">{patient.address}</p>
-                {/* <p className="text-muted mb-0">IT department</p> */}
-              </td>
-              <td>
-                <p className="fw-normal mb-1">{patient.dob}</p>
-                {/* <p className="text-muted mb-0">IT department</p> */}
-              </td>
-              <td>
-                <p className="fw-normal mb-1">{patient.contact_no}</p>
-                {/* <p className="text-muted mb-0">IT department</p> */}
-              </td>
-              <td>
-                <p className="fw-normal mb-1">{patient.email}</p>
-                {/* <p className="text-muted mb-0">IT department</p> */}
-              </td>
-              <td>
-                <p className="fw-normal mb-1">{patient.guardian}</p>
-                {/* <p className="text-muted mb-0">IT department</p> */}
-              </td>
-              <td>
-                <p className="fw-normal mb-1">{patient.relation}</p>
-                {/* <p className="text-muted mb-0">IT department</p> */}
-              </td>
-              <td>
-                <p className="fw-normal mb-1">{patient.gender}</p>
-                {/* <p className="text-muted mb-0">IT department</p> */}
-              </td>
-              <td>
-                <p className="fw-normal mb-1">{patient.patient_status}</p>
-                {/* <p className="text-muted mb-0">IT department</p> */}
-              </td>
-              <td>
-                <MDBBtn color="link" rounded size="sm" onClick={handleDelete}>
-                  <CiEdit />
-                </MDBBtn>
-              </td>
-              <td>
-                <MDBBtn color="link" rounded size="sm">
-                  <RiDeleteBin6Fill />
-                </MDBBtn>
-              </td>
-            </tr>
+            <>
+              {editPatientId === patient.id ? (
+                <EditableRow editFormData={editFormData} handleEditFormChange={handleEditFormChange} patient={patient}/>
+              ) : (
+                <ReadOnly patient={patient} handleEditClick={handleEditClick} handleDelete={handleDelete}/>
+              )}
+
+             
+            </>
           );
         })}
         {/* <tr>
@@ -177,6 +193,8 @@ const TablePatients = ({ patients }) => {
         </tr> */}
       </MDBTableBody>
     </MDBTable>
+
+    </form>
   );
 };
 export default TablePatients;
