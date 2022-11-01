@@ -19,6 +19,15 @@ figcaption,.com { color: #93a1a1; }
 #registrar{
   height: 100%;
 }
+#item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#btn{
+  width: 50px;
+  height: 30px;
+}
 
 
 .prettyprint {
