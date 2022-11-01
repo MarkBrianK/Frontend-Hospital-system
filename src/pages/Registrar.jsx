@@ -3,6 +3,7 @@ import "../pages/App.css"
 
 const Registrar=(props)=>{
 const[formData, setFormData] = useState({
+  username: "",
   ticket_no: "",
   patient_no: "",
   reg_date: "",
@@ -29,7 +30,7 @@ const handlePostSubmit = (event) =>{
     body: JSON.stringify(formData),
   })
     .then((res) => res.json())
-    .then(setFormData);
+    .then(setFormData)
   console.log(formData);
 }
 const handleChange = (event) => {
@@ -48,7 +49,7 @@ const handleChange = (event) => {
       <p className="register-info">Note: All fields are required.</p>
       <div className="row">
         <p className="col-md-6"><input type="text" placeholder="Ticket Number"  name="ticket_no" onChange={handleChange}  required/></p>
-        <p className="col-md-6"><input type="text" placeholder="Patient Name" name="patient_no" onChange={handleChange}  required/></p>
+        <p className="col-md-6"><input type="text" placeholder="Patient Name" name="username" onChange={handleChange}  required/></p>
       </div>
       <p><input type="email" placeholder="Email Address" name="email" onChange={handleChange} required/>
          <span className="extern-type">We'll keep this private.</span>
