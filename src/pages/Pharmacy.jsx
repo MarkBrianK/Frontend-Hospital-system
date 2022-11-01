@@ -5,7 +5,7 @@ import Row from 'react-bootstrap/Row';
 
 function Pharmacy() {
   return (
-    <Form>
+    <Form style={{width: "100%"}}>
       <Row className="mb-3">
         <Form.Group as={Col} controlId="formGridEmail">
           <Form.Label>Patient Name</Form.Label>
@@ -35,15 +35,15 @@ function Pharmacy() {
         </Form.Group>
 
         <Form.Group as={Col} controlId="formGridState">
-          <Form.Label>State</Form.Label>
+          <Form.Label>Mrp</Form.Label>
           <Form.Select defaultValue="Choose...">
-            <option>Choose...</option>
-            <option>...</option>
+            {/* <option>Choose...</option>
+            <option>...</option> */}
           </Form.Select>
         </Form.Group>
 
         <Form.Group as={Col} controlId="formGridZip">
-          <Form.Label>Zip</Form.Label>
+          <Form.Label>Discount</Form.Label>
           <Form.Control />
         </Form.Group>
       </Row>

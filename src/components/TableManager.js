@@ -28,8 +28,8 @@ const TableManager = ({ managers }) => {
         <tr className="table-dark">
           <th scope="col">Name</th>
           <th scope="col">Job Description</th>
-          <th scope="col">Contact </th>
-          <th scope="col">Email</th>
+          {/* <th scope="col">Contact </th> */}
+          {/* <th scope="col">Email</th> */}
           <th scope="col">Start Time</th>
           <th scope="col">End Time</th>
           <th scope="col">Status</th>
