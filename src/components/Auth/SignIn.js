@@ -13,6 +13,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { NavLink } from 'react-router-dom';
 
 const SignIn = ({ setUser }) => {
  
@@ -149,10 +150,16 @@ const SignIn = ({ setUser }) => {
                 </Link> */}
               </Grid>
               <Grid item>
+
+
+                <NavLink exact to= "/signup" variant="body2">
+                  {"Don't have an account? Sign Up"}
+                </NavLink>
+
                 <Link to="/signup" variant="body2" className="pe-auto">
                   Don't have an account? Sign Up
                 </Link>
-              </Grid>
+                              </Grid>
             </Grid>
           </Box>
         </Box>
