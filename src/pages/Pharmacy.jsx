@@ -5,7 +5,7 @@ import Row from 'react-bootstrap/Row';
 
 function Pharmacy() {
   return (
-    <Form style={{width: "100%"}}>
+    <Form style={{width: "100%", marginTop:"5rem"}}>
       <Row className="mb-3">
         <Form.Group as={Col} controlId="formGridEmail">
           <Form.Label>Patient Name</Form.Label>

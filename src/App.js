@@ -26,7 +26,7 @@ const App = () => {
           <Nav />
           {/* <TestNav /> */}
         </div>
-        <div class="d-flex col-10 w-75 m-auto ">
+        <div class="d-flex col-10 w-75 mt-20">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/admin" element={<Admin />} />

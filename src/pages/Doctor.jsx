@@ -17,7 +17,7 @@ const Doctor = () => {
 
   return (
     <>
-      <TablePatient patients={patients}/>
+      <TablePatient style={{ marginTop:"5rem"}} patients={patients}/>
 
       <div className="mx-auto mt-4">
         {/* <TablePatient patients={patients} /> */}
