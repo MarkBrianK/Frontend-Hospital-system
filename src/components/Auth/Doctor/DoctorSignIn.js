@@ -16,6 +16,7 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { NavLink } from "react-router-dom";
 
 const SignIn = ({ setUser }) => {
+
   const navigate = useNavigate();
   const [errors, setErrors] = useState([]);
   const [formData, setFormData] = useState({
@@ -32,7 +33,7 @@ const SignIn = ({ setUser }) => {
 
   const onFormSubmit = (e) => {
     e.preventDefault();
-    // post user credentialas to login route
+    // post doctor credentialas to login route
 
     fetch("/doctors/signin", {
       method: "POST",
@@ -43,12 +44,11 @@ const SignIn = ({ setUser }) => {
     }).then((res) => {
       if (res.ok) {
         res.json().then((user) => {
-          setUser(user);
-          alert("login success!");
-          navigate("/");
-          console.log(user);
+          user && setUser(user);
+          navigate("/doctor");
           sessionStorage.setItem("user", JSON.stringify(user));
           console.log(user);
+          alert("login success!");
           // alert(errors);
         });
       } else {
