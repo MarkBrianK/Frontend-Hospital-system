@@ -23,7 +23,7 @@ const App = () => {
       <Header />
       <div class="row">
         <div className="col-2 sticky-top">
-          <Nav />
+          
           {/* <TestNav /> */}
         </div>
         <div class="d-flex col-10 w-75 m-auto ">
