@@ -15,7 +15,7 @@ import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { NavLink } from "react-router-dom";
 
-const SignIn = ({ setUser }) => {
+const ManagerSignIn = ({ setUser }) => {
 
   const navigate = useNavigate();
   const [errors, setErrors] = useState([]);
@@ -92,7 +92,7 @@ const SignIn = ({ setUser }) => {
             {/* <LockOutlinedIcon /> */}
           </Avatar>
           <Typography component="h1" variant="h5">
-            Doctor Sign in
+            Manager Sign in
           </Typography>
           <Box
             component="form"
@@ -159,6 +159,6 @@ const SignIn = ({ setUser }) => {
     </ThemeProvider>
   );
 };
-export default SignIn;
+export default ManagerSignIn;
 
 //==================================MUI Ends here =====================================

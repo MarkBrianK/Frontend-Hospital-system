@@ -34,7 +34,7 @@ import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { Button } from "@mui/material";
 
-const SignUp = ({ setLogin }) => {
+const ManagerSignUp = ({ setLogin }) => {
   const [formData, setFormData] = useState({
     username: "",
     email: "",
@@ -157,7 +157,7 @@ const SignUp = ({ setLogin }) => {
             {/* <LockOutlinedIcon /> */}
           </Avatar>
           <Typography component="h1" variant="h5">
-            Doctor Sign up
+            Manager Sign up
           </Typography>
           <Box
             component="form"
@@ -258,6 +258,6 @@ const SignUp = ({ setLogin }) => {
     </ThemeProvider>
   );
 };
-export default SignUp;
+export default ManagerSignUp;
 
 // ======================================MUI ends here ============================================
