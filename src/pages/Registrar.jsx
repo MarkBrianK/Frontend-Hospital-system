@@ -52,7 +52,7 @@ const Registrar = ({ handlePosting}) => {
 
     function handleSubmit(e){
         e.preventDefault();
-        fetch(``,{
+        fetch(`/patients`,{
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

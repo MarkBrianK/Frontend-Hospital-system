@@ -1,4 +1,5 @@
 // import React, { useState } from "react";
+import LogoutIcon from "@mui/icons-material/Logout";
 // import {MdLocalPharmacy} from 'react-icons/md'
 // import "../Nav/Nav.css";
 // import { useNavigate } from "react-router-dom";
@@ -276,8 +277,9 @@ export default function MiniDrawer() {
               </ListItemButton>
             </ListItem>
           ))}
+          <LogoutIcon />
            <Divider />
-          <button>Logout</button>
+          {/* <button>Logout</button> */}
         </List>
 
 

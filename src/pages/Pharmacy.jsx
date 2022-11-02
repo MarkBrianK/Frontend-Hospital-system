@@ -3,7 +3,7 @@ import React, { useEffect,useState } from 'react'
 import { Container } from '@mui/system';
 
 
-const Technicians = ({ handlePosting}) => {
+const Pharmacy = ({ handlePosting}) => {
  
 
 
@@ -50,7 +50,7 @@ const Technicians = ({ handlePosting}) => {
 
     function handleSubmit(e){
         e.preventDefault();
-        fetch(``,{
+        fetch(`/Pharmacy`,{
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -82,7 +82,7 @@ const Technicians = ({ handlePosting}) => {
       <div>
         <Container className='formContainer'>
     <div 
-    style={{ fontSize: "20px", fontWeight: "bold" }}
+    style={{ fontSize: "20px", marginTop: "130px", fontWeight: "bold" }}
     >
         Pharmacy Form 
     </div>
@@ -121,6 +121,15 @@ const Technicians = ({ handlePosting}) => {
       </div>
 
       <div>
+        <FormControl sx={{ m: 1, width: '35ch' }}>
+            <InputLabel>Amount</InputLabel>
+            <Input name="amount" value={formData.amount} onChange={handleChange}/>
+            <FormHelperText>Amount</FormHelperText>
+        </FormControl>
+      </div>
+
+
+      <div>
       </div>
       <div>
       </div>
@@ -146,4 +155,4 @@ const Technicians = ({ handlePosting}) => {
   );
 }
 
-export default Technicians;
+export default Pharmacy;
