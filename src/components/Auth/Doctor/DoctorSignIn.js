@@ -44,11 +44,11 @@ const SignIn = ({ setUser }) => {
     }).then((res) => {
       if (res.ok) {
         res.json().then((user) => {
-          user && setUser(user);
+          alert("login success!");
           navigate("/doctor");
+          user && setUser(user);
           sessionStorage.setItem("user", JSON.stringify(user));
           console.log(user);
-          alert("login success!");
           // alert(errors);
         });
       } else {

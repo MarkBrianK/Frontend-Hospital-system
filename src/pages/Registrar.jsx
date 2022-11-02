@@ -80,7 +80,7 @@ const handleChange = (event) => {
         <div>
       </div>
         <br/>
-        <p class="register-submit"><input type="submit" value="Register Now"/></p>
+        <p className="register-submit"><input type="submit" value="Register Now"/></p>
 			</form>
     </div>
   )

@@ -342,8 +342,9 @@ html {
 }
 body {
   margin: 0;
-  background: url("https://images.unsplash.com/photo-1583830379747-195159d0de82?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nzh8fGhvc3BpdGFsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
+  /* background: url("https://images.unsplash.com/photo-1583830379747-195159d0de82?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nzh8fGhvc3BpdGFsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"); */
   background-size: cover;
+  background-color: #1e347b;
   position: relative;
   background-position: center;
   width: 100%;

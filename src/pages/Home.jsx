@@ -16,16 +16,16 @@ const Home = () => {
   return (
     <div>
     
-      <section className="heroo">
+      <section className="hero">
       <header>
         <h2><a href="#"></a></h2>
         <nav>
-          <li><Link to="/adminsignup" class="btn">Admin</Link></li>
-          <li><Link to="/doctorsignup" class="btn">Doctor</Link></li>
-          <li><Link to="/managersignup" class="btn">Mananger</Link></li>
-          <li><Link to="/signin" class="btn">Registrar</Link></li>
-          <li><Link to="/signup" class="btn">Admin</Link></li>
-          <li><Link to="/signup" class="btn">Admin</Link></li>
+          <li><Link to="/adminsignup" className="btn">Admin</Link></li>
+          <li><Link to="/doctorsignup" className="btn">Doctor</Link></li>
+          <li><Link to="/managersignup" className="btn">Mananger</Link></li>
+          <li><Link to="/signin" className="btn">Registrar</Link></li>
+          {/* <li><Link to="/signup" className="btn">Admin</Link></li>
+          <li><Link to="/signup" className="btn">Admin</Link></li> */}
 
 
 
@@ -36,40 +36,40 @@ const Home = () => {
       </header>
 
 
-      <section class="hero">
-        <div class="hero-content-area">
+      <section className="hero">
+        <div className="hero-content-area">
           <h1>Hospital system!</h1>
           <h3>Touching lives, one patient at a time</h3>
-          <a href="mailto:ngilaian47@gmail.com" class="btn">Contact Us Now</a>
+          <a href="mailto:ngilaian47@gmail.com" className="btn">Contact Us Now</a>
         </div>
       </section>
       </section>
 
-      <section class="services">
-        <h3 class="title">Some of our Services:</h3>
+      <section className="services">
+        <h3 className="title">Some of our Services:</h3>
         <p>In an age where malpractrice threatens the lives of our community, we ainm to create a safe environment by emphasizing precautions,safety and welfare of our patients.
           We do that by striving to lower medical errors, reduce re-admissions,and educate our patients on how to live a healthy lifestyle
 
         </p>
         <hr/>
 
-        <ul class="grid">
-          <li class="small image-1"></li>
-          <li class="large image-2"></li>
-          <li class="large image-3"></li>
-          <li class="small image-4"></li>
+        <ul className="grid">
+          <li className="small image-1"></li>
+          <li className="large image-2"></li>
+          <li className="large image-3"></li>
+          <li className="small image-4"></li>
         </ul>
       </section>
 
-      <section class="testimonials">
-        <h3 class="title">Testimonials from our Patients</h3>
+      <section className="testimonials">
+        <h3 className="title">Testimonials from our Patients</h3>
         <hr/>
-        <p class="quote">I recently found myself under your care for a cardiac issue. While there, accompanied by my wife, we found that the entire staff at Jamaica Hospital was exceedingly professional and efficient, from your E.R. receptionists to the cardiac care team. You should be proud of your outstanding staff and service</p>
-        <p class="author">- Albert Herter</p>
-        <p class="quote">I was recently cared for at Jamaica Hospital following a heart attack while at JFK. I just wanted to say a few words about the exceptional care I received in the Jamaica Hospital Cardiac Care Unit and the MICU. All of the doctors and nurses were friendly, pleasant, kind, thorough, conscientious and professional. I am happy to have been in their care</p>
-        <p class="author">- Sharon Rosenberg</p>
-        <p class="quote">We would like to let you know how much we appreciate the special care our daughter was given by the doctors and staff at your hospital. Our baby’s physician was professional, kind, understanding, and her treatment was “right on.” Your organization should be proud to have such kind hearted people. They made sure that my daughter’s hospitalization was very pleasant.</p>
-        <p class="author">- Luis Mendoza</p>
+        <p className="quote">I recently found myself under your care for a cardiac issue. While there, accompanied by my wife, we found that the entire staff at Jamaica Hospital was exceedingly professional and efficient, from your E.R. receptionists to the cardiac care team. You should be proud of your outstanding staff and service</p>
+        <p className="author">- Albert Herter</p>
+        <p className="quote">I was recently cared for at Jamaica Hospital following a heart attack while at JFK. I just wanted to say a few words about the exceptional care I received in the Jamaica Hospital Cardiac Care Unit and the MICU. All of the doctors and nurses were friendly, pleasant, kind, thorough, conscientious and professional. I am happy to have been in their care</p>
+        <p className="author">- Sharon Rosenberg</p>
+        <p className="quote">We would like to let you know how much we appreciate the special care our daughter was given by the doctors and staff at your hospital. Our baby’s physician was professional, kind, understanding, and her treatment was “right on.” Your organization should be proud to have such kind hearted people. They made sure that my daughter’s hospitalization was very pleasant.</p>
+        <p className="author">- Luis Mendoza</p>
       </section>
    </div>
 );
