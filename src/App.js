@@ -35,12 +35,7 @@ const App = () => {
   // }
   return (
     <div>
-      <Header />
-      <div class="row">
-        <div className="col-2 sticky-top">
-          <Nav user={user} />
-        </div>
-        <div class="d-flex col-10 w-90 m-auto ">
+    
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/admin" element={<Admin />} />
@@ -85,8 +80,7 @@ const App = () => {
             />
           </Routes>
         </div>
-      </div>
-    </div>
+    
   );
 };
 
