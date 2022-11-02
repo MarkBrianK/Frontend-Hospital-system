@@ -186,7 +186,6 @@ const SignUp = ({ setLogin }) => {
                   label="User Name"
                   name="username"
                   autoComplete="family-name"
-
                   onChange={onFormInputChanged}
                 />
               </Grid>

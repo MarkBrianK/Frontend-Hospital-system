@@ -3,7 +3,7 @@ import React, { useEffect,useState } from 'react'
 import { Container } from '@mui/system';
 
 
-const Technicians = ({ handlePosting}) => {
+const Registrar = ({ handlePosting}) => {
  
 
 
@@ -31,7 +31,7 @@ const Technicians = ({ handlePosting}) => {
 
 
     const [formData, setFormData] = useState({
-      patient_id: '',
+      patient_name: '',
       reg_form_id: '',
       Reg_number: '',
       Lab_number: '',
@@ -65,7 +65,7 @@ const Technicians = ({ handlePosting}) => {
         })
 
         setFormData({
-          patient_id: '',
+          patient_name: '',
           reg_form_id: '',
           Reg_number: '',
           Lab_number: '',
@@ -94,8 +94,8 @@ const Technicians = ({ handlePosting}) => {
       
       <div>
         <FormControl sx={{ m: 1, width: '35ch' }}>
-            <InputLabel>Patient Id</InputLabel>
-            <Input name="patient_id" value={formData.patient_id} onChange={handleChange}/>
+            <InputLabel>Patient Name</InputLabel>
+            <Input name="patient_name" value={formData.patient_name} onChange={handleChange}/>
             <FormHelperText>Please Enter Patient id</FormHelperText>
         </FormControl>
       </div>
@@ -166,4 +166,4 @@ const Technicians = ({ handlePosting}) => {
   );
 }
 
-export default Technicians;
+export default Registrar;
