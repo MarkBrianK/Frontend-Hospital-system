@@ -4,6 +4,12 @@ import SignIn from "./components/Auth/SignIn";
 import SignUp from "./components/Auth/SignUp";
 import Nav from "./components/Nav/Nav";
 import Doctor from "./pages/Doctor";
+import DoctorSignup from './components/Auth/Doctor/DoctorSignup'
+import DoctorSignIn from "./components/Auth/Doctor/DoctorSignIn";
+// import AdminSignIn from "./components/Auth/Admin/AdminSignIn";
+// import AdminSignUp from './components/Auth/Admin/AdminSignup'
+
+
 import PatientDetails from './components/PatientDetails'
 import Home from "./pages/Home";
 import Patient from "./pages/Shift";
@@ -26,7 +32,7 @@ const App = () =>{
       <Header />
       <div class="row">
         <div className="col-2 sticky-top">
-          <Nav user={user}/>
+          <Nav user={user} />
         </div>
         <div class="d-flex col-10 w-90 m-auto ">
           <Routes>
@@ -37,7 +43,7 @@ const App = () =>{
             <Route path="/registrar" element={<Registrar />} />
             <Route path="/patient" element={<Patient />} />
             <Route path="/laboratory" element={<Laboratory />} />
-            <Route path='/patientdetails/:id' element={<PatientDetails/>}/>
+            <Route path="/patientdetails/:id" element={<PatientDetails />} />
             <Route
               path="/signin"
               element={<SignIn user={user} setUser={setUser} />}
@@ -46,6 +52,22 @@ const App = () =>{
               path="/signup"
               element={<SignUp onLogin={() => setLogin(login)} />}
             />
+            <Route
+              path="/doctorsignup"
+              element={<DoctorSignup onLogin={() => setLogin(login)} />}
+            />
+            <Route
+              path="/doctorsignin"
+              element={<DoctorSignIn onLogin={() => setLogin(login)} />}
+            />
+            {/* <Route
+              path="/adminsignin"
+              element={<AdminSignIn onLogin={() => setLogin(login)} />}
+            />
+            <Route
+              path="/adminsignup"
+              element={<AdminSignUp onLogin={() => setLogin(login)} />}
+            /> */}
           </Routes>
         </div>
       </div>

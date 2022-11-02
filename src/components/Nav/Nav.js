@@ -277,7 +277,7 @@ export default function MiniDrawer() {
               </ListItemButton>
             </ListItem>
           ))}
-          <LogoutIcon onClick={handleLogoutClick}/>
+          <LogoutIcon />
            <Divider />
           {/* <button>Logout</button> */}
         </List>

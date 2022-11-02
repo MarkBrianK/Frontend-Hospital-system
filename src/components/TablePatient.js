@@ -97,7 +97,7 @@ const handleEditFormChange = (event) => {
   return (
     <form>
     <MDBTable align="middle">
-      <MDBTableHead className="sticky-top">
+      <MDBTableHead>
         <tr className="table-dark">
           <th scope="col">Ticket Number</th>
           <th scope="col">Patient Number</th>
