@@ -46,7 +46,7 @@ const SignIn = ({ setUser }) => {
         res.json().then((user) => {
           setUser(user);
           alert('login success!')
-          navigate("/");
+          navigate("/registrar");
           console.log(user);
           sessionStorage.setItem("user", JSON.stringify(user));
           console.log(user);
