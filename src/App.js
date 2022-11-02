@@ -8,6 +8,10 @@ import DoctorSignup from './components/Auth/Doctor/DoctorSignup'
 import DoctorSignIn from "./components/Auth/Doctor/DoctorSignIn";
 // import AdminSignIn from "./components/Auth/Admin/AdminSignIn";
 // import AdminSignUp from './components/Auth/Admin/AdminSignup'
+import AdminSignIn from "./components/Auth/Admin/AdminSignin";
+import AdminSignUp from "./components/Auth/Admin/AdminSignup";
+import ManagerSignUp from "./components/Auth/Manager/ManagerSIgnUp";
+import ManagerSignIn from "./components/Auth/Manager/ManagerSignIn";
 
 
 import PatientDetails from './components/PatientDetails'
@@ -63,14 +67,22 @@ const App = () => {
               path="/doctorsignin"
               element={<DoctorSignIn onLogin={() => setLogin(login)} />}
             />
-            {/* <Route
+            <Route
               path="/adminsignin"
               element={<AdminSignIn onLogin={() => setLogin(login)} />}
             />
             <Route
               path="/adminsignup"
               element={<AdminSignUp onLogin={() => setLogin(login)} />}
-            /> */}
+            />
+            <Route
+              path="/managersignup"
+              element={<ManagerSignUp onLogin={() => setLogin(login)} />}
+            />
+            <Route
+              path="/managersignin"
+              element={<ManagerSignIn onLogin={() => setLogin(login)} />}
+            />
           </Routes>
         </div>
       </div>
