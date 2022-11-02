@@ -24,7 +24,7 @@ const TableAdmin = ({ admins }) => {
 
   return (
     <MDBTable align="middle">
-      <MDBTableHead className="sticky-top">
+      <MDBTableHead>
         <tr className="table-dark">
           <th scope="col">Name</th>
           <th scope="col">Job Description</th>

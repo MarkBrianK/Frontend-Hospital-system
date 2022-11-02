@@ -31,6 +31,7 @@ const handlePostSubmit = (event) =>{
   })
     .then((res) => res.json())
     .then(setFormData)
+    setFormData({ticket_no:"", address:""})
   console.log(formData);
 }
 const handleChange = (event) => {
@@ -48,7 +49,7 @@ const handleChange = (event) => {
     <form onSubmit={handlePostSubmit} className="fcorn-register container">
       <p className="register-info">Note: All fields are required.</p>
       <div className="row">
-        <p className="col-md-6"><input type="text" placeholder="Ticket Number"  name="ticket_no" onChange={handleChange}  required/></p>
+        <p className="col-md-6"><input type="text" value={formData.ticket_no} placeholder="Ticket Number"  name="ticket_no" onChange={handleChange}  required/></p>
         <p className="col-md-6"><input type="text" placeholder="Patient Name" name="username" onChange={handleChange}  required/></p>
       </div>
       <p><input type="email" placeholder="Email Address" name="email" onChange={handleChange} required/>

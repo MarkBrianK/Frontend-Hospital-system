@@ -4,14 +4,19 @@ import TablePatient from "../components/TablePatient";
 const Doctor = () => {
   const [patients, setPatients] = useState([]);
 
-  const getPatients = async () => {
-    const res = await fetch("/patients");
-    const data = await res.json();
-    setPatients(data);
-    console.log(patients);
-  };
-
+  // const getPatients = async () => {
+  //   const res = await fetch("/patients");
+  //   const data = await res.json();
+  //   setPatients(data);
+  //   console.log(patients);
+  // };
   useEffect(() => {
+    const getPatients = async () => {
+      const res = await fetch("/patients");
+      const data = await res.json();
+      console.log(data);
+      setPatients(data);
+    };
     getPatients();
   }, []);
 
@@ -19,12 +24,10 @@ const Doctor = () => {
     <>
       <TablePatient style={{ marginTop:"5rem"}} patients={patients}/>
 
-      <div className="mx-auto mt-4">
-        {/* <TablePatient patients={patients} /> */}
+  return (
 
-        {/* <TablePatient /> */}
-      </div>
-    </>
+      <TablePatient patients={patients}/>
+      </>
   );
 };
 

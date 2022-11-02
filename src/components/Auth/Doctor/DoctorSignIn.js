@@ -1,29 +1,28 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 
-import * as React from 'react';
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import CssBaseline from '@mui/material/CssBaseline';
-import TextField from '@mui/material/TextField';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
-import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Container from '@mui/material/Container';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { NavLink } from 'react-router-dom';
+import * as React from "react";
+import Avatar from "@mui/material/Avatar";
+import Button from "@mui/material/Button";
+import CssBaseline from "@mui/material/CssBaseline";
+import TextField from "@mui/material/TextField";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import Checkbox from "@mui/material/Checkbox";
+import Grid from "@mui/material/Grid";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Container from "@mui/material/Container";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { NavLink } from "react-router-dom";
 
 const SignIn = ({ setUser }) => {
- 
   const navigate = useNavigate();
   const [errors, setErrors] = useState([]);
   const [formData, setFormData] = useState({
     email: "",
     password: "",
   });
-  
+
   const onFormInputChanged = (e) => {
     setFormData({
       ...formData,
@@ -35,7 +34,7 @@ const SignIn = ({ setUser }) => {
     e.preventDefault();
     // post user credentialas to login route
 
-    fetch("/users/signin", {
+    fetch("/doctors/signin", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -45,7 +44,7 @@ const SignIn = ({ setUser }) => {
       if (res.ok) {
         res.json().then((user) => {
           setUser(user);
-          alert('login success!')
+          alert("login success!");
           navigate("/");
           console.log(user);
           sessionStorage.setItem("user", JSON.stringify(user));
@@ -57,9 +56,6 @@ const SignIn = ({ setUser }) => {
       }
     });
   };
-
-
-
 
   function Copyright(props) {
     return (
@@ -81,8 +77,6 @@ const SignIn = ({ setUser }) => {
 
   const theme = createTheme();
 
-  
-
   return (
     <ThemeProvider theme={theme}>
       <Container component="main" maxWidth="xs">
@@ -99,7 +93,7 @@ const SignIn = ({ setUser }) => {
             {/* <LockOutlinedIcon /> */}
           </Avatar>
           <Typography component="h1" variant="h5">
-            Sign in
+            Doctor Sign in
           </Typography>
           <Box
             component="form"
@@ -150,13 +144,11 @@ const SignIn = ({ setUser }) => {
                 </Link> */}
               </Grid>
               <Grid item>
-
-
-                <NavLink exact to= "/signup" variant="body2">
+                {/* <NavLink exact to="/signup" variant="body2">
                   {"Don't have an account? Sign Up"}
-                </NavLink>
+                </NavLink> */}
 
-                <Link to="/signup" variant="body2" className="pe-auto">
+                <Link to="/doctorsignup" variant="body2" className="pe-auto">
                   Don't have an account? Sign Up
                 </Link>
               </Grid>
@@ -167,7 +159,7 @@ const SignIn = ({ setUser }) => {
       </Container>
     </ThemeProvider>
   );
-}
+};
 export default SignIn;
 
 //==================================MUI Ends here =====================================
