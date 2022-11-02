@@ -35,10 +35,7 @@ const Technicians = ({ handlePosting}) => {
       ticket_id: '',
       Remark: '',
       inventory_item: '',
-      town: '',
-      job_type: '',
-      job_description: '',
-      labour_cost: ''
+     
 
     })
 
@@ -46,14 +43,14 @@ const Technicians = ({ handlePosting}) => {
       
     const [technicians, setTechnicians] = useState([])
     useEffect( () => {
-      fetch("https://backend-host.herokuapp.com/technicians")
+      fetch("")
       .then(res => res.json())
       .then(data => setTechnicians(data))
     },[])
 
     function handleSubmit(e){
         e.preventDefault();
-        fetch(`https://backend-host.herokuapp.com/technicians`,{
+        fetch(``,{
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -70,10 +67,7 @@ const Technicians = ({ handlePosting}) => {
           ticket_id: '',
           Remark: '',
           inventory_item: '',
-          town: '',
-          job_type: '',
-          job_description: '',
-          labour_cost: ''
+         
         })
     }
 
