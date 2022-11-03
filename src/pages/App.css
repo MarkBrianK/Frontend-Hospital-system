@@ -20,6 +20,11 @@ a {
 	opacity: 0.75;
 	color: #fff;
 }
+.pharmacy{
+  background: url("https://cutewallpaper.org/21/pharmacy-wallpapers/Apollo-Specialty-Pharmacy-Pharmacy-Hd-Free-Wallpaper-.png");
+  height: 100vh;
+  width: 100%;
+}
 
 a:hover {
 	opacity: 1;

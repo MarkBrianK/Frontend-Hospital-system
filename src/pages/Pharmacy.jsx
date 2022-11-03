@@ -1,7 +1,13 @@
 import { Box, Button, FormControl, FormHelperText, Input, InputLabel } from '@mui/material';
 import React, { useEffect,useState } from 'react'
 import { Container } from '@mui/system';
+import "./App.css"
+
+
 const Pharmacy = ({ handlePosting}) => {
+
+
+
   // const [tech, setTech] = useFetchData()
   // const deleteTech = ()=>{
   //   fetch(`http://localhost:9292/technicians/${id}`, {
@@ -21,21 +27,30 @@ const Pharmacy = ({ handlePosting}) => {
   //     })
   //     .catch(err => console.log(err))
   // }
+
+
+
     const [formData, setFormData] = useState({
       patient_id: '',
       ticket_id: '',
       Remark: '',
       inventory_item: '',
+
+
     })
+
+
+
     const [technicians, setTechnicians] = useState([])
     useEffect( () => {
       fetch("")
       .then(res => res.json())
       .then(data => setTechnicians(data))
     },[])
+
     function handleSubmit(e){
         e.preventDefault();
-        fetch(`/pharmacies`,{
+        fetch(`/Pharmacy`,{
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -51,23 +66,27 @@ const Pharmacy = ({ handlePosting}) => {
           ticket_id: '',
           Remark: '',
           inventory_item: '',
+
         })
     }
+
     function handleChange(e){
         setFormData({
             ...formData, [e.target.name]: e.target.value,
         });
     }
+
   return (
-    <div>
+    <div className='pharmacy'>
       <div>
         <Container className='formContainer'>
     <div
-    style={{ fontSize: "20px", marginTop: "130px", fontWeight: "bold" }}
+    style={{ fontSize: "20px",  fontWeight: "bold" }}
     >
         Pharmacy Form
     </div>
     <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
+
       <div>
         <FormControl sx={{ m: 1, width: '35ch' }}>
             <InputLabel>Patient Id</InputLabel>
@@ -103,13 +122,19 @@ const Pharmacy = ({ handlePosting}) => {
             <FormHelperText>Amount</FormHelperText>
         </FormControl>
       </div>
+
+
       <div>
       </div>
       <div>
       </div>
+
+
       <div>
       </div>
+
       <div>
+
       </div>
     </Box>
     <div>
@@ -124,4 +149,5 @@ const Pharmacy = ({ handlePosting}) => {
     </div>
   );
 }
+
 export default Pharmacy;

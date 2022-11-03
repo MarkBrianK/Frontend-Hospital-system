@@ -120,4 +120,4 @@ const handleChange = (event) => {
   )
 }
 
-export default Registrar
+export default Registrar;
