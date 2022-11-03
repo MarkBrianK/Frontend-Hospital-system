@@ -1,5 +1,6 @@
 import React, {useState} from "react"
 import "../pages/App.css"
+import { Container,Row, Col } from "react-bootstrap"
 
 const Registrar=(props)=>{
 const[formData, setFormData] = useState({
@@ -43,24 +44,11 @@ const handleChange = (event) => {
   return(
 <>
 {/* <body id="signup"> */}
-
-  <main className="container">
-
-    <div className="back"></div>
-    <div className="brand">
-      <div className="logo">
-        <img height="64" src="https://thumbs.dreamstime.com/b/caduceus-medical-symbol-isolated-white-background-d-render-caduceus-medical-symbol-isolated-145721309.jpg" alt="Panda Logo" />
-        <h1>
-          <span className="name"><span>Touching</span><span>Lives</span></span>Foundation
-        </h1>
-      </div>
-      {/* <span className="copyright">Photo by
-        <a href="https://unsplash.com/@filipz" target="_blank" rel="noreferrer" title="Photographer">Filip Zrnzević</a>
-        on
-        <a href="https://unsplash.com/photos/QsWG0kjPQRY" target="_blank" rel="noreferrer"title="Background Photo">Unsplash</a></span> */}
-    </div>
-
-    <div className="formWrapper">
+<Container>
+      <Row>
+        <Col md={2}></Col>
+        <Col md={8}>
+        <div className="formWrapper">
       <div className="form">
         <h2>Silver Crest Hospital</h2>
         <form onSubmit={handlePostSubmit} id="form" method="get" action="#">
@@ -113,8 +101,12 @@ const handleChange = (event) => {
 
 
       </div>
-    </div>
-    </main>
+    </div></Col>
+        <Col md={2}></Col>
+      </Row>
+    </Container>
+
+ 
 {/* </body> */}
 </>
   )

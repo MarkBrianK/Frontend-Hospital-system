@@ -3,16 +3,17 @@ import useFetch from '../customHooks/UseFetch';
 import { useParams, Link } from 'react-router-dom';
 
 const PatientCard = ({patient}) => {
+  console.log(patient)
   //  const { data: patient, error, loading } = useFetch("/patients/" + id);
  const {id} = useParams()  
   return (
     <div className="card my-4">
       {/* <!-- Card image --> */}
-      <img
-        className="card-img-top"
-        src="https://thumbs.dreamstime.com/b/psychiatric-patient-avatar-character-vector-illustration-design-88377725.jpg"
-        alt="Card image cap"
-      />
+        {/* <img
+          className="card-img-top"
+          src="https://thumbs.dreamstime.com/b/psychiatric-patient-avatar-character-vector-illustration-design-88377725.jpg"
+          alt="Card image cap"
+        /> */}
 
       {/* <!-- Card content --> */}
       <div className="card-body">
@@ -26,7 +27,7 @@ const PatientCard = ({patient}) => {
         {/* <!-- Text --> */}
         <p className="card-text">
           <h6>Registration Date:</h6> <span></span>
-          {patient.reg_date.toString()}
+          {patient.reg_date}
         </p>
         <p className="card-text">
           Some quick example text to build on the card title and make up the

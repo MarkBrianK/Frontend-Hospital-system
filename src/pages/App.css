@@ -281,7 +281,7 @@ header nav li {
 body {
   overflow-x: hidden;
   /* width:47%; */
-  margin: 0 var(--o-padding);
+  /* margin: 0 var(--o-padding); */
   font-family: var(--font);
   color: black;
   background: -webkit-gradient(
@@ -293,21 +293,21 @@ body {
   );
   background: -o-linear-gradient(bottom, #c5c5c5, #f5f5f5);
   background: linear-gradient(0deg, #c5c5c5, #f5f5f5);
-  display: -webkit-box;
+  /* display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  /* justify-content: center; */
+  justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center;
+  align-items: center; */
   min-height: 100vh;
 }
 
 .container {
-  max-width: var(--max-width);
-  width: 200%;
+  /* max-width: var(--max-width); */
+  /* width: 200%; */
   margin: auto;
   /* padding-left: ; */
   min-height: 600px;
@@ -389,7 +389,7 @@ html {
 }
 
 .brand .logo {
-  display: -webkit-box;
+  /* display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
@@ -409,7 +409,7 @@ html {
   top: 5rem;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
+  transform: translateX(-50%); */
 }
 .brand .logo h1 {
   color: #392f32;

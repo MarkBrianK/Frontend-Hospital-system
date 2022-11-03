@@ -30,7 +30,7 @@ const Doctor = () => {
         return (
           <>
             <div class="col-md-4">
-              <PatientCard patient={patient} />
+              <PatientCard  patient={patient} />
             </div>
           </>
         );
