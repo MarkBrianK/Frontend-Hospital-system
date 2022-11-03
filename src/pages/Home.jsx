@@ -36,7 +36,7 @@ const Home = () => {
           <h1>Hospital System</h1>
           <h3>Touching lives, one patient at a time</h3>
           <div id="contactus">
-          <a href="#services" className="btn" > About us</a>
+          <a href="#services" className="btn" > Our Services</a>
           <a href="mailto:ngilaian47@gmail.com" className="btn" >Contact Us Now</a>
 
 
