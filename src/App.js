@@ -31,8 +31,9 @@ const App = () => {
   //   return(<SignIn/>)
   // }
   return (
-    <div>
+    <>
       <Nav />
+      {/* <Home/> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/admin" element={<Admin />} />
@@ -77,7 +78,7 @@ const App = () => {
           element={<ManagerSignIn onLogin={() => setLogin(login)} />}
         />
       </Routes>
-    </div>
+    </>
   );
 };
 
