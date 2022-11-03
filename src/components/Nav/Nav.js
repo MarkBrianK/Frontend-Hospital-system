@@ -242,24 +242,24 @@ const onHandleLogoutClick = () => {
         <Divider />
         <List>
           {[
-            <NavLink  to="/admin" activeClassName="activeClicked">
+            <NavLink exact to="/admin" activeClassName="activeClicked">
               <p>Admin</p>
             </NavLink>,
-            <NavLink  to="/pharmacy" activeClassName="activeClicked">
+            <NavLink exact to="/pharmacy" activeClassName="activeClicked">
               <p>Pharmacy</p>
             </NavLink>,
-            <NavLink  to="/doctor" activeClassName="activeClicked">
+            <NavLink exact to="/doctor" activeClassName="activeClicked">
               <p>Doctor</p>
             </NavLink>,
 
-            <NavLink  to="/registrar" activeClassName="activeClicked">
+            <NavLink exact to="/registrar" activeClassName="activeClicked">
               <p>Registrar</p>
             </NavLink>,
-            <NavLink  to="/patient" activeClassName="activeClicked">
+            <NavLink exact to="/patient" activeClassName="activeClicked">
               <p>Shift</p>
             </NavLink>,
 
-            <NavLink  to="/laboratory" activeClassName="activeClicked">
+            <NavLink exact to="/laboratory" activeClassName="activeClicked">
               <p>Laboratory</p>
             </NavLink>,
           ].map((text, index) => (
@@ -284,6 +284,7 @@ const onHandleLogoutClick = () => {
               </ListItemButton>
             </ListItem>
           ))}
+          
           <LogoutIcon onClick={onHandleLogoutClick} />
           <Divider />
           {/* <button>Logout</button> */}

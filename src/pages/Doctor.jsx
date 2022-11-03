@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import PatientCard from "../components/PatientCard";
 import TablePatient from "../components/TablePatient";
 
 const Doctor = () => {
@@ -21,13 +22,24 @@ const Doctor = () => {
   }, []);
 
   return (
-    <>
-      <TablePatient style={{ marginTop:"5rem"}} patients={patients}/>
+    // <TablePatient patients={patients}/>
 
-  return (
-
-      <TablePatient patients={patients}/>
-      </>
+    <div class="row">
+      {/* <!-- Card --> */}
+      {patients.map((patient) => {
+        return (
+          <>
+            <div class="col-md-4">
+              <PatientCard patient={patient} />
+            </div>
+          </>
+        );
+      })}
+      {/* <!-- Card --  >
+       */}
+      {/* <div class="col-md-4">.col-md-4</div>
+      <div class="col-md-4">.col-md-4</div> */}
+    </div>
   );
 };
 
