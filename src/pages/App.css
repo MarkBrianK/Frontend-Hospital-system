@@ -275,6 +275,7 @@ header nav li {
 }
 
 body {
+  overflow-x: hidden;
   margin: 0 var(--o-padding);
   font-family: var(--font);
   color: black;
