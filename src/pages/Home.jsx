@@ -22,10 +22,10 @@ const Home = () => {
         <nav>
           <li><Link to="/adminsignup" class="btn">Admin</Link></li>
           <li><Link to="/doctorsignup" class="btn">Doctor</Link></li>
-          <li><Link to="/managersignup" class="btn">Mananger</Link></li>
+          <li><Link to="/managersignup" class="btn">Manager</Link></li>
           <li><Link to="/signin" class="btn">Registrar</Link></li>
-          <li><Link to="/signup" class="btn">Admin</Link></li>
-          <li><Link to="/signup" class="btn">Admin</Link></li>
+          <li><Link to="/signup" class="btn">Lab</Link></li>
+          <li><Link to="/signup" class="btn">Pharmacy</Link></li>
 
 
 

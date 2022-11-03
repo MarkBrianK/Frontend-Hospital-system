@@ -40,49 +40,78 @@ const handleChange = (event) => {
   });
 };
   return(
-//
-
-
-
-  <div id="registrar" className="form-wrapper">
-    <form onSubmit={handlePostSubmit} className="fcorn-register container">
-      <p className="register-info">Note: All fields are required.</p>
-      <div className="row">
-        <p className="col-md-6"><input type="text" placeholder="Ticket Number"  name="ticket_no" onChange={handleChange}  required/></p>
-        <p className="col-md-6"><input type="text" placeholder="Patient Name" name="username" onChange={handleChange}  required/></p>
+<>
+{/* <body id="signup"> */}
+  <main className="container">
+    <div className="back"></div>
+    <div className="brand">
+      <div className="logo">
+        <img height="64" src="https://thumbs.dreamstime.com/b/caduceus-medical-symbol-isolated-white-background-d-render-caduceus-medical-symbol-isolated-145721309.jpg" alt="Panda Logo" />
+        <h1>
+          <span className="name"><span>Touching</span><span>Lives</span></span>Foundation
+        </h1>
       </div>
-      <p><input type="email" placeholder="Email Address" name="email" onChange={handleChange} required/>
-         <span className="extern-type">We'll keep this private.</span>
-      </p>
-      {/* <p><input type="password" placeholder="Password" required/>
-        <span className="extern-type">Atleast 8 characters long.</span>
-      </p>
-      <p><input type="password" placeholder="Verify Password" required/></p> */}
-      <div className="row">
-        <p className="col-md-4"><input type="text" placeholder="Registration Date" name="reg_date"  onChange={handleChange} required/></p>
-        <p className="col-md-4"><input type="date" id="birthday" name="dob" placeholder="calendar" onChange={handleChange} required/></p>
-        <p className="col-md-4"><input type="text" placeholder="Contact" name="contact_no" onChange={handleChange} required/></p>
-        <p className="col-md-12"><input type="text" name="guardian" placeholder="Parent/Guardian contact" onChange={handleChange}/><span className="extern-type">For emergencies</span></p>
-      </div>
-      <div className="row">
-          <div>
-           <label> Gender
-          <select onChange={handleChange} name="gender">
-          <option value="0" selected disabled>Gender</option>
-          <option value="Male">Male</option>
-          <option value="Female">Female</option>
-          <option value="Non binary">Non binary</option>
-          </select>
-          </label>
-
-        </div>
-        </div>
-        <div>
-      </div>
-        <br/>
-        <p class="register-submit"><input type="submit" value="Register Now"/></p>
-			</form>
+      <span className="copyright">Photo by
+        <a href="https://unsplash.com/@filipz" target="_blank" rel="noreferrer" title="Photographer">Filip Zrnzević</a>
+        on
+        <a href="https://unsplash.com/photos/QsWG0kjPQRY" target="_blank" rel="noreferrer"title="Background Photo">Unsplash</a></span>
     </div>
+    <div className="formWrapper">
+      <div className="form">
+        <h2>Silver Crest Hospital</h2>
+        <form id="form" method="get" action="#">
+          <div className="inputWrapper">
+            <input type="text" name="first" id="first" required />
+            <label for="first">Ticket Number</label>
+          </div>
+          <div className="inputWrapper">
+            <input type="text" name="last" id="last" required />
+            <label for="last">Patient Name</label>
+          </div>
+          <div className="inputWrapper">
+            <input type="reg_date" name="reg_date" id="reg_date" required />
+            <label for="reg_date">Registration Date</label>
+          </div>
+          <div className="inputWrapper">
+            <input type="Address" name="Address" id="Address" required />
+            <label for="Address">Address</label>
+          </div>
+          <div className="inputWrapper">
+            <input type="dob" name="dob" id="dob" required />
+            <label for="dob">Date of Birth</label>
+          </div>
+          <div className="inputWrapper">
+            <input type="contact_no" name="contact_no" id="contact_no" required />
+            <label for="contact_no">Phone Number</label>
+          </div>
+          <div className="inputWrapper">
+            <input type="email" name="email" id="email" required />
+            <label for="email">Email</label>
+          </div>
+          <div className="inputWrapper">
+            <input type="tel" name="guardian" id="guardian" required />
+            <label for="guardian">Guardian Contact</label>
+          </div>
+          <div className="inputWrapper">
+            <input type="relation" name="relation" id="relation" required />
+            <label for="relation">Guardian Relation</label>
+          </div>
+          <div className="inputWrapper">
+            <input type="gender" name="gender" id="gender" required />
+            <label for="gender"> gender</label>
+          </div>
+          <div className="inputWrapper">
+            <input type="patient_status" name="patient_status" id="patient_status" required />
+            <label for="patient_status"> patient_status</label>
+          </div>
+        </form>
+        <input form="form" type="submit" name="register" id="register" value="REGISTER" />
+        
+      </div>
+    </div>
+  </main>
+{/* </body> */}
+</>
   )
 }
 
