@@ -152,7 +152,7 @@ const SignIn = ({ setUser }) => {
               <Grid item>
 
 
-                <NavLink exact to= "/signup" variant="body2">
+                <NavLink to= "/signup" variant="body2">
                   {"Don't have an account? Sign Up"}
                 </NavLink>
 

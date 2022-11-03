@@ -67,15 +67,15 @@ hr {
 
 .image-1 {
 	background-image: url("https://images.unsplash.com/photo-1584466990376-09422a2b033a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODF8fGhvc3BpdGFsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
-} 
+}
 
 .image-2 {
 	background-image: url("https://images.unsplash.com/photo-1550831106-f8d5b6f1abe9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OTF8fGhvc3BpdGFsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
-} 
- 
+}
+
 .image-3 {
 	background-image: url("https://images.unsplash.com/photo-1606811841689-23dfddce3e95?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTAyfHxob3NwaXRhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60");
-} 
+}
 
 .image-4 {
 	background-image: url("https://images.unsplash.com/photo-1588966914896-8bb0f66c78a6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTM0fHxob3NwaXRhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60");
@@ -89,8 +89,9 @@ section h3.title {
 }
 
 section p {
-	max-width: 775px;
+	max-width: 2000px;
 	line-height: 2;
+  font-size: 22px;
 	padding: 0 20px;
 	margin-bottom: 30px;
 	text-align: center;
@@ -116,6 +117,7 @@ header {
 	opacity: 0;
 	color: #fff;
 	z-index: 2;
+  margin-bottom: 0;
 }
 
 @keyframes fadein {
@@ -130,7 +132,6 @@ header h2 {
 
 header nav {
 	display: flex;
-	margin-right: -15px;
 }
 
 header nav li {
@@ -341,10 +342,12 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
-body {
-  margin: 0;
-  background: url("https://images.unsplash.com/photo-1583830379747-195159d0de82?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nzh8fGhvc3BpdGFsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
+.body {
+  background: url("https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+  /* background: url("https://images.unsplash.com/photo-1505751172876-fa1923c5c528?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGhvc3BpdGFsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"); */
+  /* background: url("https://images.unsplash.com/photo-1583830379747-195159d0de82?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nzh8fGhvc3BpdGFsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"); */
   background-size: cover;
+  /* background-color: #1e347b; */
   position: relative;
   background-position: center;
   width: 100%;
@@ -1703,4 +1706,26 @@ output {
   -webkit-transform: translate(0, 1px);
   -ms-transform: translate(0, 1px);
   transform: translate(0, 1px);
+}
+#hero{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#hero ul  {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+#hospitale {
+  margin-top: 25vh;
+}
+#contactus{
+  margin-top: 20vh;
+  display: flex;
+  justify-content: space-around;
+}
+#services{
+  margin-top: -30vh;
 }
