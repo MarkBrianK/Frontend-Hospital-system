@@ -14,31 +14,24 @@ const Home = () => {
 //   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
 //   <link rel="stylesheet" href="assets/css/styles.css"/> 
   return (
-    <div>
-    
+    <div className="body">
       <section className="hero">
       <header>
         <h2><a href="#"></a></h2>
         <nav>
           <li><Link to="/adminsignup" className="btn">Admin</Link></li>
           <li><Link to="/doctorsignup" className="btn">Doctor</Link></li>
-          <li><Link to="/managersignup" className="btn">Mananger</Link></li>
+          <li><Link to="/managersignup" className="btn">Manager</Link></li>
           <li><Link to="/signin" className="btn">Registrar</Link></li>
           {/* <li><Link to="/signup" className="btn">Admin</Link></li>
           <li><Link to="/signup" className="btn">Admin</Link></li> */}
 
-
-
-
-
-
         </nav>
       </header>
 
-
       <section className="hero">
         <div className="hero-content-area">
-          <h1>Hospital system!</h1>
+          <h1>Hospital System!</h1>
           <h3>Touching lives, one patient at a time</h3>
           <a href="mailto:ngilaian47@gmail.com" className="btn">Contact Us Now</a>
         </div>
@@ -46,9 +39,9 @@ const Home = () => {
       </section>
 
       <section className="services">
-        <h3 className="title">Some of our Services:</h3>
-        <p>In an age where malpractrice threatens the lives of our community, we ainm to create a safe environment by emphasizing precautions,safety and welfare of our patients.
-          We do that by striving to lower medical errors, reduce re-admissions,and educate our patients on how to live a healthy lifestyle
+        <h3 className="title">Some of our Services</h3>
+        <p>In an age where malpractrice threatens the lives of our community, we aim to create a safe environment by emphasizing precautions,safety and welfare of our patients.
+          We do that by striving to lower medical errors, reduce re-admissions,and educate our patients on how to live a healthy lifestyle.
 
         </p>
         <hr/>

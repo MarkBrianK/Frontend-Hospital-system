@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import SignIn from "./components/Auth/SignIn";
 import SignUp from "./components/Auth/SignUp";
-import Nav from "./components/Nav/Nav";
+// import Nav from "./components/Nav/Nav";
 import Doctor from "./pages/Doctor";
 import DoctorSignup from './components/Auth/Doctor/DoctorSignup'
 import DoctorSignIn from "./components/Auth/Doctor/DoctorSignIn";
@@ -32,7 +32,7 @@ const App = () => {
   // }
   return (
     <div>
-      <Nav />
+      {/* <Nav /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/admin" element={<Admin />} />
