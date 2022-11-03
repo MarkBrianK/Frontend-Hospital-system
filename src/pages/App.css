@@ -276,6 +276,7 @@ header nav li {
 
 body {
   overflow-x: hidden;
+  /* width:47%; */
   margin: 0 var(--o-padding);
   font-family: var(--font);
   color: black;
@@ -324,7 +325,7 @@ body {
   background: url("https://i.imgur.com/EulHW7S.jpeg") center / cover no-repeat;
   height: 100%;
   width: 100%;
-  z-index: -1;
+  /* z-index: -1; */
 }
 
 .brand {
