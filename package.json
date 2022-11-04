@@ -1,6 +1,6 @@
 {
   "name": "hospital",
-  "proxy": "https://mighty-fjord-86271.herokuapp.com",
+  "proxy": "https://obscure-everglades-33209.herokuapp.com/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
