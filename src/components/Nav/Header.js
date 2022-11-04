@@ -20,6 +20,7 @@ function NavBar() {
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/doctorsignin">Doctors</Nav.Link>
             <Nav.Link href="/signin">Registrar</Nav.Link>
+            <Nav.Link href="/pharmacy">Pharmacy</Nav.Link>
             
           </Nav>
           <Form className="d-flex">
