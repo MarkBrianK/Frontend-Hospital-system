@@ -33,7 +33,7 @@ const Pharmacy = ({ handlePosting}) => {
     const [formData, setFormData] = useState({
       patient_id: '',
       ticket_id: '',
-      Remark: '',
+      remark: '',
       inventory_item: '',
 
 
@@ -50,7 +50,7 @@ const Pharmacy = ({ handlePosting}) => {
 
     function handleSubmit(e){
         e.preventDefault();
-        fetch(`/Pharmacy`,{
+        fetch(`/pharmas`,{
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -64,7 +64,7 @@ const Pharmacy = ({ handlePosting}) => {
         setFormData({
           patient_id: '',
           ticket_id: '',
-          Remark: '',
+          remark: '',
           inventory_item: '',
 
         })
@@ -104,7 +104,7 @@ const Pharmacy = ({ handlePosting}) => {
       <div>
         <FormControl sx={{ m: 1, width: '35ch' }}>
             <InputLabel>Remarks</InputLabel>
-            <Input name="Remark" value={formData.Remark} onChange={handleChange}/>
+            <Input name="remark" value={formData.Remark} onChange={handleChange}/>
             <FormHelperText>Please Enter Remarks</FormHelperText>
         </FormControl>
       </div>

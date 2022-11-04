@@ -18,12 +18,12 @@ const Home = () => {
       <section  className="hero">
       <header>
         <nav id="hero">
-          <ul>
+          {/* <ul>
           <li><Link to="/adminsignup" className="btn">Admin</Link></li>
           <li><Link to="/doctorsignup" className="btn">Doctor</Link></li>
           <li><Link to="/managersignup" className="btn">Manager</Link></li>
           <li><Link to="/signin" className="btn">Registrar</Link></li>
-          </ul>
+          </ul> */}
 
           {/* <li><Link to="/signup" className="btn">Admin</Link></li>
           <li><Link to="/signup" className="btn">Admin</Link></li> */}
@@ -33,7 +33,7 @@ const Home = () => {
 
       <section  id="hospitale"  className="hero">
         <div className="hero-content-area">
-          <h1>Hospital System</h1>
+          <h1>Silver Crest Hospital </h1>
           <h3>Touching lives, one patient at a time</h3>
           <div id="contactus">
           <a href="#services" className="btn" > Our Services</a>

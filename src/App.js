@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import SignIn from "./components/Auth/SignIn";
 import SignUp from "./components/Auth/SignUp";
+import Header from "./components/Nav/Header";
 // import Nav from "./components/Nav/Nav";
 import Doctor from "./pages/Doctor";
 import DoctorSignup from './components/Auth/Doctor/DoctorSignup'
@@ -32,7 +33,7 @@ const App = () => {
   // }
   return (
     <div>
-      {/* <Nav /> */}
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/admin" element={<Admin />} />

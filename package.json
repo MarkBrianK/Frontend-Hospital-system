@@ -1,6 +1,6 @@
 {
   "name": "hospital",
-  "proxy": "http://localhost:3000",
+  "proxy": "https://mighty-fjord-86271.herokuapp.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
